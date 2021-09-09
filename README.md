@@ -5,6 +5,8 @@ My seminar topic as a part of BTech course in ECE. I would be first implementing
 
 ## A Brief About Digital Image Watermarking 
 
+### Frequency Domain Watermarking Embedding 
+
 ## Phase 1: Python Implementation 
 
 ## Phase 2: FPGA Implementation 
