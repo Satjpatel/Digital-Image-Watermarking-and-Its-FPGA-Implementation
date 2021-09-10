@@ -12,6 +12,8 @@ import numpy as np
 
 img11 = cv.imread('KungFuPanda.jpg',0) 
 
+
+
 cv.imshow('Kung Fu Panda', img11)  
 
 cv.waitKey(0)
@@ -27,8 +29,28 @@ width = img11.shape[1]
 # DCT - Discrete Cosine Transform 
 
 dct_array = np.zeros(shape=(height, width))
+print('Height: {}'.format(height))
+print('Weight: {}'.format(width))
 
-# Converting the image into DCT domain 
-for i in range(0,height,1):
-        dct_array[i]= spfft.dct(img11[i], norm = "ortho") 
-        
+# Zero padding to make perfect dimensions for 8x8 DCT block 
+
+# Finding the number of rows and columns to pad with zeros to make a perfect 
+# rectangle that an 8x8 matrix of DCT coeffecients can easily traverse 
+
+rows_to_add = (height+8)%8 
+columns_to_add = (width+8)%8 
+
+new_height = height + rows_to_add 
+new_width = width + columns_to_add 
+
+padded_image = np.zeros((new_height, new_width), dtype=np.uint8)
+padded_image[:height,:width] = img11 
+
+
+
+cv.imshow('Kung Fu Panda Padded', padded_image)  
+
+cv.waitKey(0)
+
+
+# Padded Image is now ready for performing DCT 
