@@ -10,6 +10,12 @@ import scipy.fft as spfft
 import numpy as np
 
 
+def dct2D(a):
+    return spfft.dct(spfft.dct(a.T, norm='ortho').T, norm='ortho')
+
+def idct2D(a):
+    return spfft.idct(spfft.idct(a.T, norm='ortho').T, norm='ortho')
+
 img11 = cv.imread('KungFuPanda.jpg',0) 
 
 
@@ -47,10 +53,39 @@ padded_image = np.zeros((new_height, new_width), dtype=np.uint8)
 padded_image[:height,:width] = img11 
 
 
-
+dct_of_padded_image = np.zeros((np.shape(padded_image)))
 cv.imshow('Kung Fu Panda Padded', padded_image)  
-
 cv.waitKey(0)
 
 
 # Padded Image is now ready for performing DCT 
+
+# Performing DCT on 8x8 blocks now 
+
+for i in range(0,height,8): 
+    for j in range(0,height,8): 
+        dct_of_padded_image[i:(i+8), j:(j+8)] = dct2D(padded_image[i:(i+8), j:(j+8)]) 
+
+
+
+cv.imshow('Kung Fu Panda in DCT Domain', dct_of_padded_image)  
+cv.waitKey(0)
+
+
+original_image_after_idct = np.zeros(np.shape(padded_image), dtype=np.uint8)
+
+for k in range(0,height,8): 
+    for l in range(0,height,8): 
+        original_image_after_idct[k:(k+8), l:(l+8)] = idct2D(dct_of_padded_image[k:(k+8), l:(l+8)]) 
+
+
+cv.imshow('Kung Fu Panda bank in spatial domain from DCT Domain', original_image_after_idct)  
+cv.waitKey(0)
+
+
+
+
+
+
+
+
