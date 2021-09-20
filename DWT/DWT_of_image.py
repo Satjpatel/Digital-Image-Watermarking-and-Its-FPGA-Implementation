@@ -47,14 +47,15 @@ cv.waitKey(0)
 # Now working on 2 Level Discrete Wavelet Transforms 
 
 img = cv.imread('Lenna.png',0) 
-
 cv.imshow('Lenna Original',img) 
 cv.waitKey(0)
 cv.imwrite('Lenna Original.jpg', img)
 coeff_level2 = pywt.wavedec2(img, 'db3', mode = 'symmetric', level=2 )
 [cA2, (cH2, cV2, cD2), (cH1, cV1, cD1)] = coeff_level2 
 
+
 # Level 1 Decomposition Images 
+
 img_intermediate = pywt.idwt2((cA2, (cH2, cV2, cD2)), 'db3',mode = 'symmetric') 
 plotty.subplot(2,2,1)
 cv.imshow('Approximate Details - Level 1', img_intermediate.astype(np.uint8))
@@ -71,6 +72,19 @@ cv.imwrite('Diagonal Details (cD) - Level 1.jpg', cD1.astype(np.uint8))
 cv.waitKey(0)
 
 
+# Embedded the image information in cH Level 2 
+watermark = cv.imread('star.png',0) 
+cv.imshow('Watermark',watermark)
+cv.waitKey(0) 
+
+padded_watermark = np.zeros((np.shape(cH2)))
+padded_watermark[:np.shape(watermark)[0],:np.shape(watermark)[1]] = watermark
+cH2 = padded_watermark 
+
+cv.imwrite('Horizontal Details Modified (cH) - Level 1.jpg', cH2.astype(np.uint8))
+
+'''
+
 # Level 2 Decomposition 
 plotty.subplot(2,2,1)
 cv.imshow('Approximate Details - Level 2', cA2.astype(np.uint8))
@@ -86,8 +100,26 @@ cv.imshow('Diagonal Details (cD) - Level 2', cD2.astype(np.uint8))
 cv.imwrite('Diagonal Details (cD) - Level 2.jpg', cD2.astype(np.uint8))
 cv.waitKey(0)
 
+''' 
+
 # Reconstructing the image using Inverse DWT 
-img_reconstructed = pywt.waverec2(coeff_level2, 'db3',mode = 'symmetric') 
+coefff_level2_dash = [cA2, (cH2, cV2, cD2), (cH1, cV1, cD1)]
+
+img_reconstructed = pywt.waverec2(coefff_level2_dash, 'db3',mode = 'symmetric') 
 cv.imshow('Reconstructed Lenna Image', img_reconstructed.astype(np.uint8))
-cv.imwrite('Reconstructed Lenna Image.jpg', img_reconstructed.astype(np.uint8))
 cv.waitKey(0)
+# cv.imwrite('Reconstructed Lenna Image.jpg', img_reconstructed.astype(np.uint8))
+cv.destroyAllWindows()
+
+
+# Extracting the Watermark Image from this reconstructed image
+# Watermark is in cH2
+
+
+coeff_level21 = pywt.wavedec2(img_reconstructed, 'db3', mode = 'symmetric', level=2 )
+[cA21, (cH21, cV21, cD21), (cH11, cV11, cD11)] = coeff_level21
+
+cv.imshow('Extracted Watermark:', cH21.astype(np.uint8))
+cv.waitKey(0) 
+
+
