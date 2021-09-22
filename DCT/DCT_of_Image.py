@@ -2,96 +2,91 @@
 """
 Created on Thu Sep  9 10:37:33 2021
 
-@author: HP
+@author: Sat Patel -- U18EC105
 """
-
+# Libraries to Use 
 import cv2 as cv 
 import scipy.fft as spfft 
 import numpy as np
+import matplotlib.pyplot as plotty 
 
 
+
+# Functions to be used 
+# 1. 2D Discrete Cosine Transform
 def dct2D(a):
     return spfft.dct(spfft.dct(a.T, norm='ortho').T, norm='ortho')
-
+# 2. 2D Inverse Discrete Cosine Transform
 def idct2D(a):
     return spfft.idct(spfft.idct(a.T, norm='ortho').T, norm='ortho')
 
-
-watermark = cv.imread('star.png',0)
-cv.imshow('Star -- To be Watermarked', watermark)
-cv.waitKey(0)
-print(watermark.shape[0]) 
-print(watermark.shape[1])
-watermarked_reshaped = watermark.reshape((1,watermark.shape[0]*watermark.shape[1]))
-watermark_nparray = np.zeros((1,watermark.shape[0]*watermark.shape[1]))
-watermark_nparray = watermarked_reshaped
-
-img11 = cv.imread('KungFuPanda.jpg',0) 
-cv.imshow('Kung Fu Panda', img11)  
+# Reading the Watermark 
+watermark = cv.imread('discord.png',0)
+cv.imshow('Discord Logo -- To be Watermarked', watermark)
 cv.waitKey(0)
 
+watermark_flattened = watermark.reshape((1,watermark.shape[0]*watermark.shape[1]))
 
-# Getting the dimensions of the image 
+# Reading the Image 
+img11 = cv.imread('Lenna.png',0) 
+cv.imshow('Lenna - Original', img11)  
+cv.waitKey(0)
 
-height = img11.shape[0]  
-width = img11.shape[1] 
+plotty.subplot(2,1,1) 
+cv.imshow('Discord Logo -- To be Watermarked', watermark)
+plotty.subplot(2,1,2) 
+cv.imshow('Lenna - Original', img11)  
+cv.waitKey(0)
+cv.destroyAllWindows()
+
+'''
+ Converting the spatial image into Frequency Domain using DCT
+''' 
 
 
-# Converting the spatial image into Frequency Domain using DCT
-# DCT - Discrete Cosine Transform 
-
-dct_array = np.zeros(shape=(height, width))
-print('Height: {}'.format(height))
-print('Weight: {}'.format(width))
-
-# Zero padding to make perfect dimensions for 8x8 DCT block 
 
 # Finding the number of rows and columns to pad with zeros to make a perfect 
 # rectangle that an 8x8 matrix of DCT coeffecients can easily traverse 
+rows_to_add    = (img11.shape[0])%8 
+columns_to_add = (img11.shape[1])%8 
 
-rows_to_add = (height+8)%8 
-columns_to_add = (width+8)%8 
+new_height     = img11.shape[0] + 8 - rows_to_add 
+new_width      = img11.shape[1] + 8 - columns_to_add 
 
-new_height = height + rows_to_add 
-new_width = width + columns_to_add 
-
+# Zero padding to make perfect dimensions for 8x8 DCT block 
 padded_image = np.zeros((new_height, new_width), dtype=np.uint8)
-padded_image[:height,:width] = img11 
+padded_image[:img11.shape[0],:img11.shape[1]] = img11 
 
-
-dct_of_padded_image = np.zeros((np.shape(padded_image)))
-cv.imshow('Kung Fu Panda Padded', padded_image)  
-cv.waitKey(0)
-
-# Padded Image is now ready for performing DCT 
-
-# Performing DCT on 8x8 blocks now 
-
-for i in range(0,new_height,8): 
-    for j in range(0,new_width,8): 
-      #  for m in range(0, watermark.shape[0], 4) :
-       #     for n in range(0, watermark.shape[1], 4): 
-                dct_of_padded_image[i:(i+8), j:(j+8)] = dct2D(padded_image[i:(i+8), j:(j+8)]) 
-               # dct_of_padded_image[(i+4):(i+8), j:(j+4)] = watermark[m:(m+4), n:(n+4)]
-# Embedding the watermark into DCT Domain now 
+# Empty Array for DCT Co-effecients 
+dct_of_padded_image                    = np.zeros((np.shape(padded_image)))
+dct_of_padded_image_watermark_embedded = np.zeros((np.shape(padded_image)))
+# Performing DCT on 8x8 blocks
 
 m = 0 
 for i in range(0,new_height,8): 
     for j in range(0,new_width,8): 
-        if(m < 10000):
-            dct_of_padded_image[(i+4), (j+4)] = np.reshape(watermark_nparray[0,m], (1,1)) 
+        dct_of_padded_image[i:(i+8), j:(j+8)] = dct2D(padded_image[i:(i+8), j:(j+8)]) 
+  
+dct_of_padded_image_watermark_embedded = dct_of_padded_image    
+             
+# Embedding the watermark into DCT Domain now 
+for i in range(0,new_height,8): 
+    for j in range(0,new_width,8): 
+        if(m < watermark.shape[0]*watermark.shape[1]):
+            dct_of_padded_image_watermark_embedded[(i+4), (j+4)] = (watermark_flattened[0,m]) 
             m = m+1
 
-
-
-print(dct_of_padded_image[0:(8), 0:(8)])
-print(dct_of_padded_image[1112:(1112+8), 784])
-
-print(watermark[0:(4), 0:(4)])
-
-cv.imshow('Kung Fu Panda in DCT Domain', dct_of_padded_image)  
+plotty.subplot(2,1,1) 
+cv.imshow('Lenna in DCT Domain', dct_of_padded_image)  
+plotty.subplot(2,1,2) 
+cv.imshow('Lenna in DCT Domain after Watermark is Embedded', dct_of_padded_image_watermark_embedded)  
 cv.waitKey(0)
+cv.destroyAllWindows()
 
+difference_image = dct_of_padded_image_watermark_embedded - dct_of_padded_image 
+cv.imshow('Difference Image', difference_image.astype(np.uint8))
+cv.waitKey(0)
+cv.destroyAllWindows()
 
 original_image_after_idct = np.zeros(np.shape(padded_image), dtype=np.uint8)
 
@@ -99,7 +94,7 @@ for k in range(0,new_height,8):
     for l in range(0,new_width,8): 
         original_image_after_idct[k:(k+8), l:(l+8)] = idct2D(dct_of_padded_image[k:(k+8), l:(l+8)]) 
         
-cv.imshow('Kung Fu Panda bank in spatial domain from DCT Domain', original_image_after_idct)  
+cv.imshow('Lenna back in Spatial Domain from DCT Domain', original_image_after_idct)  
 cv.waitKey(0)
 
 
@@ -112,11 +107,11 @@ watermark_extracted = np.zeros((1, np.shape(watermark)[0]*np.shape(watermark)[1]
 
 for i in range(0,new_height,8): 
     for j in range(0,new_width,8): 
-        if(n < 10000): 
+        if(n < watermark.shape[0]*watermark.shape[1]): 
             watermark_extracted[0,n] = dct_of_padded_image[(i+4), (j+4)]  
             n = n + 1 
 
-watermark_extracted_reshaped = np.reshape(watermark_extracted, (np.shape(watermark)[0], np.shape(watermark)[1]))
+watermark_extracted_reshaped = np.reshape(watermark_extracted, (np.shape(watermark)))
 
 cv.imshow('Extracted Watermark', watermark_extracted_reshaped.astype(np.uint8))
 cv.waitKey(0) 
