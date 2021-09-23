@@ -22,15 +22,15 @@ def idct2D(a):
 
 # Reading the Watermark 
 watermark = cv.imread('discord.png',0)
-cv.imshow('Discord Logo -- To be Watermarked', watermark)
-cv.waitKey(0)
+#cv.imshow('Discord Logo -- To be Watermarked', watermark)
+#cv.waitKey(0)
 
 watermark_flattened = watermark.reshape((1,watermark.shape[0]*watermark.shape[1]))
 
 # Reading the Image 
 img11 = cv.imread('Lenna.png',0) 
-cv.imshow('Lenna - Original', img11)  
-cv.waitKey(0)
+#cv.imshow('Lenna - Original', img11)  
+#cv.waitKey(0)
 
 plotty.subplot(2,1,1) 
 cv.imshow('Discord Logo -- To be Watermarked', watermark)
@@ -38,6 +38,16 @@ plotty.subplot(2,1,2)
 cv.imshow('Lenna - Original', img11)  
 cv.waitKey(0)
 cv.destroyAllWindows()
+
+
+'''
+watermark_flattened_and_reshaped = watermark_flattened.reshape(np.shape(watermark))
+cv.imshow('Reshaped Watermark Avvi', watermark_flattened_and_reshaped)
+cv.waitKey(0) 
+cv.destroyAllWindows() 
+
+'''
+
 
 '''
  Converting the spatial image into Frequency Domain using DCT
@@ -73,26 +83,30 @@ dct_of_padded_image_watermark_embedded = dct_of_padded_image
 for i in range(0,new_height,8): 
     for j in range(0,new_width,8): 
         if(m < watermark.shape[0]*watermark.shape[1]):
-            dct_of_padded_image_watermark_embedded[(i+4), (j+4)] = (watermark_flattened[0,m]) 
-            m = m+1
+            dct_of_padded_image_watermark_embedded[(i+6):(i+8), (j+6):(j+8)] = np.reshape(watermark_flattened[0,m:m+4]/255, (2,2))
+            m = m+4
 
 plotty.subplot(2,1,1) 
-cv.imshow('Lenna in DCT Domain', dct_of_padded_image)  
+cv.imshow('Lenna in DCT Domain', dct_of_padded_image.astype(np.uint8))  
 plotty.subplot(2,1,2) 
-cv.imshow('Lenna in DCT Domain after Watermark is Embedded', dct_of_padded_image_watermark_embedded)  
+cv.imshow('Lenna in DCT Domain after Watermark is Embedded', dct_of_padded_image_watermark_embedded.astype(np.uint8))  
 cv.waitKey(0)
 cv.destroyAllWindows()
 
+
+'''
 difference_image = dct_of_padded_image_watermark_embedded - dct_of_padded_image 
 cv.imshow('Difference Image', difference_image.astype(np.uint8))
 cv.waitKey(0)
 cv.destroyAllWindows()
 
+'''
+
 original_image_after_idct = np.zeros(np.shape(padded_image), dtype=np.uint8)
 
 for k in range(0,new_height,8): 
     for l in range(0,new_width,8): 
-        original_image_after_idct[k:(k+8), l:(l+8)] = idct2D(dct_of_padded_image[k:(k+8), l:(l+8)]) 
+        original_image_after_idct[k:(k+8), l:(l+8)] = idct2D(dct_of_padded_image_watermark_embedded[k:(k+8), l:(l+8)]) 
         
 cv.imshow('Lenna back in Spatial Domain from DCT Domain', original_image_after_idct)  
 cv.waitKey(0)
@@ -104,19 +118,24 @@ cv.destroyAllWindows()
 # Extracting the water mark 
 n = 0 
 watermark_extracted = np.zeros((1, np.shape(watermark)[0]*np.shape(watermark)[1]))
+temp_array = np.zeros((2,2))
+
 
 for i in range(0,new_height,8): 
     for j in range(0,new_width,8): 
-        if(n < watermark.shape[0]*watermark.shape[1]): 
-            watermark_extracted[0,n] = dct_of_padded_image[(i+4), (j+4)]  
-            n = n + 1 
+        if(n < m ): 
+            temp_array = dct_of_padded_image_watermark_embedded[(i+6):(i+8), (j+6):(j+8)]
+            watermark_extracted[0, n:n+4] = 255*temp_array.reshape((1,4))
+            n = n + 4
 
 watermark_extracted_reshaped = np.reshape(watermark_extracted, (np.shape(watermark)))
 
 cv.imshow('Extracted Watermark', watermark_extracted_reshaped.astype(np.uint8))
 cv.waitKey(0) 
 
-cv.imwrite('Kung Fu Panda Padded.jpg', padded_image)  
-cv.imwrite('Kung Fu Panda Padded.jpg', padded_image)  
-cv.imwrite('Kung Fu Panda in DCT Domain.jpg', dct_of_padded_image)  
-cv.imwrite('Kung Fu Panda bank in spatial domain from DCT Domain.jpg', original_image_after_idct)  
+
+cv.imwrite('Lenna Before Watermark is Embedded.jpg', img11)  
+cv.imwrite('Watermark to be embedded.jpg', watermark)  
+cv.imwrite('Lenna in DCT Domain.jpg', dct_of_padded_image) 
+cv.imwrite('Lenna and Embedded Watermark.jpg', original_image_after_idct) 
+cv.imwrite('Extracted Watermark.jpg', watermark_extracted_reshaped)  
