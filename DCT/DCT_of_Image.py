@@ -21,7 +21,7 @@ def idct2D(a):
     return spfft.idct(spfft.idct(a.T, norm='ortho').T, norm='ortho')
 
 # Reading the Watermark 
-watermark = cv.imread('discord.png',0)
+watermark = cv.imread('SVNIT_logo.jpg',0)
 #cv.imshow('Discord Logo -- To be Watermarked', watermark)
 #cv.waitKey(0)
 
@@ -33,7 +33,7 @@ img11 = cv.imread('Lenna.png',0)
 #cv.waitKey(0)
 
 plotty.subplot(2,1,1) 
-cv.imshow('Discord Logo -- To be Watermarked', watermark)
+cv.imshow('SVNIT Logo -- To be Watermarked', watermark)
 plotty.subplot(2,1,2) 
 cv.imshow('Lenna - Original', img11)  
 cv.waitKey(0)
@@ -60,8 +60,10 @@ cv.destroyAllWindows()
 rows_to_add    = (img11.shape[0])%8 
 columns_to_add = (img11.shape[1])%8 
 
-new_height     = img11.shape[0] + 8 - rows_to_add 
-new_width      = img11.shape[1] + 8 - columns_to_add 
+
+new_height     = img11.shape[0] if (img11.shape[0]%8 == 0) else (img11.shape[0] + 8 - rows_to_add)
+new_width      = img11.shape[1] if (img11.shape[1]%8 == 0) else (img11.shape[1] + 8 - columns_to_add)
+
 
 # Zero padding to make perfect dimensions for 8x8 DCT block 
 padded_image = np.zeros((new_height, new_width), dtype=np.uint8)
@@ -83,7 +85,7 @@ dct_of_padded_image_watermark_embedded = dct_of_padded_image
 for i in range(0,new_height,8): 
     for j in range(0,new_width,8): 
         if(m < watermark.shape[0]*watermark.shape[1]):
-            dct_of_padded_image_watermark_embedded[(i+6):(i+8), (j+6):(j+8)] = np.reshape(watermark_flattened[0,m:m+4]/255, (2,2))
+            dct_of_padded_image_watermark_embedded[(i+4):(i+6), (j+6):(j+8)] = np.reshape(watermark_flattened[0,m:m+4]/255, (2,2))
             m = m+4
 
 plotty.subplot(2,1,1) 
@@ -124,7 +126,7 @@ temp_array = np.zeros((2,2))
 for i in range(0,new_height,8): 
     for j in range(0,new_width,8): 
         if(n < m ): 
-            temp_array = dct_of_padded_image_watermark_embedded[(i+6):(i+8), (j+6):(j+8)]
+            temp_array = dct_of_padded_image_watermark_embedded[(i+4):(i+6), (j+6):(j+8)]
             watermark_extracted[0, n:n+4] = 255*temp_array.reshape((1,4))
             n = n + 4
 
@@ -134,8 +136,9 @@ cv.imshow('Extracted Watermark', watermark_extracted_reshaped.astype(np.uint8))
 cv.waitKey(0) 
 
 
-cv.imwrite('Lenna Before Watermark is Embedded.jpg', img11)  
-cv.imwrite('Watermark to be embedded.jpg', watermark)  
-cv.imwrite('Lenna in DCT Domain.jpg', dct_of_padded_image) 
-cv.imwrite('Lenna and Embedded Watermark.jpg', original_image_after_idct) 
-cv.imwrite('Extracted Watermark.jpg', watermark_extracted_reshaped)  
+cv.imwrite('1. Lenna Before Watermark is Embedded.jpg', img11)  
+cv.imwrite('2. Watermark to be embedded.jpg', watermark)  
+cv.imwrite('3. Lenna in DCT Domain.jpg', dct_of_padded_image) 
+cv.imwrite('4. Lenna with Embedded Watermark in DCT Domain.jpg', dct_of_padded_image_watermark_embedded)
+cv.imwrite('5. Lenna and Embedded Watermark.jpg', original_image_after_idct) 
+cv.imwrite('6. Extracted Watermark.jpg', watermark_extracted_reshaped)  
