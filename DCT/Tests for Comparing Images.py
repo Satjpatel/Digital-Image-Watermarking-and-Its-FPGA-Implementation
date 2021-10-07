@@ -16,8 +16,8 @@ import skimage.metrics as sm
 
 # Peak Signal to Noise Ratio 
 
-img_clean = cv.imread('Corr_1.jpg', 0)
-img_noisy = cv.imread('Corr_2.jpg', 0)
+img_clean = cv.imread('T3.jpg', 0)
+img_noisy = cv.imread('T2.jpg', 0)
 
 # Peak Signal to Noise Ratio between the Images
 psnr = cv.PSNR(img_clean, img_noisy)

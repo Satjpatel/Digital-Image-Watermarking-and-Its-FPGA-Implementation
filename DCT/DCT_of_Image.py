@@ -15,10 +15,10 @@ import matplotlib.pyplot as plotty
 # Functions to be used 
 # 1. 2D Discrete Cosine Transform
 def dct2D(a):
-    return spfft.dct(spfft.dct(a.T, norm='ortho').T, norm='ortho')
+    return spfft.dct(spfft.dct(a.T, norm='backward').T, norm='backward')
 # 2. 2D Inverse Discrete Cosine Transform
 def idct2D(a):
-    return spfft.idct(spfft.idct(a.T, norm='ortho').T, norm='ortho')
+    return spfft.idct(spfft.idct(a.T, norm='backward').T, norm='backward')
 
 # Reading the Watermark 
 watermark = cv.imread('SVNIT_logo.jpg',0)
@@ -28,7 +28,7 @@ watermark = cv.imread('SVNIT_logo.jpg',0)
 watermark_flattened = watermark.reshape((1,watermark.shape[0]*watermark.shape[1]))
 
 # Reading the Image 
-img11 = cv.imread('Lenna.png',0) 
+img11 = cv.imread('white.jpg',0) 
 #cv.imshow('Lenna - Original', img11)  
 #cv.waitKey(0)
 
@@ -71,6 +71,7 @@ padded_image[:img11.shape[0],:img11.shape[1]] = img11
 
 # Empty Array for DCT Co-effecients 
 dct_of_padded_image                    = np.zeros((np.shape(padded_image)))
+dct_of_padded_image_once_again         = np.zeros((np.shape(padded_image)))
 dct_of_padded_image_watermark_embedded = np.zeros((np.shape(padded_image)))
 # Performing DCT on 8x8 blocks
 
@@ -85,7 +86,7 @@ dct_of_padded_image_watermark_embedded = dct_of_padded_image
 for i in range(0,new_height,8): 
     for j in range(0,new_width,8): 
         if(m < watermark.shape[0]*watermark.shape[1]):
-            dct_of_padded_image_watermark_embedded[(i+4):(i+6), (j+6):(j+8)] = np.reshape(watermark_flattened[0,m:m+4]/255, (2,2))
+            dct_of_padded_image_watermark_embedded[(i+4):(i+6), (j+6):(j+8)] = np.reshape(watermark_flattened[0,m:m+4]/255, (2,2)).astype(np.float)
             m = m+4
 
 plotty.subplot(2,1,1) 
@@ -117,6 +118,15 @@ cv.waitKey(0)
 # Writing all the images in the file 
 cv.destroyAllWindows()
 
+
+# performing DCT once again 
+for i in range(0,new_height,8): 
+    for j in range(0,new_width,8): 
+        dct_of_padded_image_once_again[i:(i+8), j:(j+8)] = dct2D(original_image_after_idct[i:(i+8), j:(j+8)]) 
+
+
+
+
 # Extracting the water mark 
 n = 0 
 watermark_extracted = np.zeros((1, np.shape(watermark)[0]*np.shape(watermark)[1]))
@@ -126,7 +136,7 @@ temp_array = np.zeros((2,2))
 for i in range(0,new_height,8): 
     for j in range(0,new_width,8): 
         if(n < m ): 
-            temp_array = dct_of_padded_image_watermark_embedded[(i+4):(i+6), (j+6):(j+8)]
+            temp_array = dct_of_padded_image_once_again[(i+4):(i+6), (j+6):(j+8)]
             watermark_extracted[0, n:n+4] = 255*temp_array.reshape((1,4))
             n = n + 4
 
