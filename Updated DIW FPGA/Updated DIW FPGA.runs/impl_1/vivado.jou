@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Oct 11 23:06:08 2021
+# Process ID: 5800
+# Current directory: C:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.runs/impl_1
+# Command line: vivado.exe -log Eight_Bit_DCT.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Eight_Bit_DCT.tcl -notrace
+# Log file: C:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.runs/impl_1/Eight_Bit_DCT.vdi
+# Journal file: C:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source Eight_Bit_DCT.tcl -notrace

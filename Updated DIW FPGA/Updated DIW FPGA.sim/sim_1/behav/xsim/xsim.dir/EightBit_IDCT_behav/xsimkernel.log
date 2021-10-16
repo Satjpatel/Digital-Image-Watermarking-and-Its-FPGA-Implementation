@@ -1,0 +1,7 @@
+Running: xsim.dir/EightBit_IDCT_behav/xsimk.exe -simmode gui -wdb EightBit_IDCT_behav.wdb -simrunnum 0 -socket 60055
+Design successfully loaded
+Design Loading Memory Usage: 64696 KB (Peak: 64696 KB)
+Design Loading CPU Usage: 374 ms
+Simulation completed
+Simulation Memory Usage: 67392 KB (Peak: 67392 KB)
+Simulation CPU Usage: 421 ms

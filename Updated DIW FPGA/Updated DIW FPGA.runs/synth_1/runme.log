@@ -1,0 +1,427 @@
+
+*** Running vivado
+    with args -log Eight_Bit_DCT.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Eight_Bit_DCT.tcl
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source Eight_Bit_DCT.tcl -notrace
+Command: synth_design -top Eight_Bit_DCT -part xcu250-figd2104-2L-e
+Starting synth_design
+WARNING: [Vivado_Tcl 4-393] The 'Synthesis' target of the following IPs are stale, please generate the output products using the generate_target or synth_ip command before running synth_design.
+C:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.srcs/sources_1/ip/FP_ADD/FP_ADD.xci
+C:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.srcs/sources_1/ip/FP_SUB/FP_SUB.xci
+C:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.srcs/sources_1/ip/FP_MUL/FP_MUL.xci
+
+INFO: [IP_Flow 19-2162] IP 'FP_ADD' is locked:
+* Current project part 'xcu250-figd2104-2L-e' and the part 'xc7k70tfbv676-1' used to customize the IP 'FP_ADD' do not match.
+INFO: [IP_Flow 19-2162] IP 'FP_SUB' is locked:
+* Current project part 'xcu250-figd2104-2L-e' and the part 'xc7k70tfbv676-1' used to customize the IP 'FP_SUB' do not match.
+INFO: [IP_Flow 19-2162] IP 'FP_MUL' is locked:
+* Current project part 'xcu250-figd2104-2L-e' and the part 'xc7k70tfbv676-1' used to customize the IP 'FP_MUL' do not match.
+Attempting to get a license for feature 'Synthesis' and/or device 'xcu250'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcu250'
+INFO: [Device 21-403] Loading part xcu250-figd2104-2L-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 6252
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1775.090 ; gain = 252.625
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Eight_Bit_DCT' [C:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.srcs/sources_1/new/Eight_Bit_DCT.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'FP_ADD' [C:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.runs/synth_1/.Xil/Vivado-16952-DESKTOP-7VGU0UB/realtime/FP_ADD_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'FP_ADD' (1#1) [C:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.runs/synth_1/.Xil/Vivado-16952-DESKTOP-7VGU0UB/realtime/FP_ADD_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'FP_SUB' [C:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.runs/synth_1/.Xil/Vivado-16952-DESKTOP-7VGU0UB/realtime/FP_SUB_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'FP_SUB' (2#1) [C:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.runs/synth_1/.Xil/Vivado-16952-DESKTOP-7VGU0UB/realtime/FP_SUB_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'FP_MUL' [C:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.runs/synth_1/.Xil/Vivado-16952-DESKTOP-7VGU0UB/realtime/FP_MUL_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'FP_MUL' (3#1) [C:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.runs/synth_1/.Xil/Vivado-16952-DESKTOP-7VGU0UB/realtime/FP_MUL_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Eight_Bit_DCT' (4#1) [C:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.srcs/sources_1/new/Eight_Bit_DCT.sv:1]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1825.035 ; gain = 302.570
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1842.953 ; gain = 320.488
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1842.953 ; gain = 320.488
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1842.953 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_ADD/FP_ADD/FP_ADD_in_context.xdc] for cell 'X0_Adder_new'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_ADD/FP_ADD/FP_ADD_in_context.xdc] for cell 'X0_Adder_new'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_ADD/FP_ADD/FP_ADD_in_context.xdc] for cell 'X2_Adder'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_ADD/FP_ADD/FP_ADD_in_context.xdc] for cell 'X2_Adder'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_ADD/FP_ADD/FP_ADD_in_context.xdc] for cell 'X4_Adder'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_ADD/FP_ADD/FP_ADD_in_context.xdc] for cell 'X4_Adder'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_ADD/FP_ADD/FP_ADD_in_context.xdc] for cell 'X6_Adder'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_ADD/FP_ADD/FP_ADD_in_context.xdc] for cell 'X6_Adder'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_ADD/FP_ADD/FP_ADD_in_context.xdc] for cell 'X0_Adder_X6'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_ADD/FP_ADD/FP_ADD_in_context.xdc] for cell 'X0_Adder_X6'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_ADD/FP_ADD/FP_ADD_in_context.xdc] for cell 'X2_Adder_X4'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_ADD/FP_ADD/FP_ADD_in_context.xdc] for cell 'X2_Adder_X4'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_ADD/FP_ADD/FP_ADD_in_context.xdc] for cell 'X0_plus_X6_plus_X2_plus_X4_adder'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_ADD/FP_ADD/FP_ADD_in_context.xdc] for cell 'X0_plus_X6_plus_X2_plus_X4_adder'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_ADD/FP_ADD/FP_ADD_in_context.xdc] for cell 'Z_2'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_ADD/FP_ADD/FP_ADD_in_context.xdc] for cell 'Z_2'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_ADD/FP_ADD/FP_ADD_in_context.xdc] for cell 'aX1_plus_cX3_add'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_ADD/FP_ADD/FP_ADD_in_context.xdc] for cell 'aX1_plus_cX3_add'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_ADD/FP_ADD/FP_ADD_in_context.xdc] for cell 'eX5_plus_gX7_add'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_ADD/FP_ADD/FP_ADD_in_context.xdc] for cell 'eX5_plus_gX7_add'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_ADD/FP_ADD/FP_ADD_in_context.xdc] for cell 'Z1_final_add'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_ADD/FP_ADD/FP_ADD_in_context.xdc] for cell 'Z1_final_add'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_ADD/FP_ADD/FP_ADD_in_context.xdc] for cell 'aX5_plus_eX7_add'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_ADD/FP_ADD/FP_ADD_in_context.xdc] for cell 'aX5_plus_eX7_add'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_ADD/FP_ADD/FP_ADD_in_context.xdc] for cell 'gX5_plus_cX7_add'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_ADD/FP_ADD/FP_ADD_in_context.xdc] for cell 'gX5_plus_cX7_add'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_ADD/FP_ADD/FP_ADD_in_context.xdc] for cell 'Z5_final_add'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_ADD/FP_ADD/FP_ADD_in_context.xdc] for cell 'Z5_final_add'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_ADD/FP_ADD/FP_ADD_in_context.xdc] for cell 'Z7_final_add'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_ADD/FP_ADD/FP_ADD_in_context.xdc] for cell 'Z7_final_add'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_SUB/FP_SUB/FP_SUB_in_context.xdc] for cell 'X1_Subtractor'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_SUB/FP_SUB/FP_SUB_in_context.xdc] for cell 'X1_Subtractor'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_SUB/FP_SUB/FP_SUB_in_context.xdc] for cell 'X3_Subtractor'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_SUB/FP_SUB/FP_SUB_in_context.xdc] for cell 'X3_Subtractor'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_SUB/FP_SUB/FP_SUB_in_context.xdc] for cell 'X5_Subtractor'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_SUB/FP_SUB/FP_SUB_in_context.xdc] for cell 'X5_Subtractor'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_SUB/FP_SUB/FP_SUB_in_context.xdc] for cell 'X7_Subtractor'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_SUB/FP_SUB/FP_SUB_in_context.xdc] for cell 'X7_Subtractor'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_SUB/FP_SUB/FP_SUB_in_context.xdc] for cell 'X0_sub_X6'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_SUB/FP_SUB/FP_SUB_in_context.xdc] for cell 'X0_sub_X6'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_SUB/FP_SUB/FP_SUB_in_context.xdc] for cell 'X2_sub_X4'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_SUB/FP_SUB/FP_SUB_in_context.xdc] for cell 'X2_sub_X4'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_SUB/FP_SUB/FP_SUB_in_context.xdc] for cell 'X0_plus_X6_minus_X2_plus_X4_sub'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_SUB/FP_SUB/FP_SUB_in_context.xdc] for cell 'X0_plus_X6_minus_X2_plus_X4_sub'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_SUB/FP_SUB/FP_SUB_in_context.xdc] for cell 'Z_6'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_SUB/FP_SUB/FP_SUB_in_context.xdc] for cell 'Z_6'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_SUB/FP_SUB/FP_SUB_in_context.xdc] for cell 'cX1_minus_gX3_minus'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_SUB/FP_SUB/FP_SUB_in_context.xdc] for cell 'cX1_minus_gX3_minus'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_SUB/FP_SUB/FP_SUB_in_context.xdc] for cell 'Z3_final_sub'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_SUB/FP_SUB/FP_SUB_in_context.xdc] for cell 'Z3_final_sub'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_SUB/FP_SUB/FP_SUB_in_context.xdc] for cell 'eX1_minus_aX3_sub'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_SUB/FP_SUB/FP_SUB_in_context.xdc] for cell 'eX1_minus_aX3_sub'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_SUB/FP_SUB/FP_SUB_in_context.xdc] for cell 'gX1_minus_eX3_sub'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_SUB/FP_SUB/FP_SUB_in_context.xdc] for cell 'gX1_minus_eX3_sub'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_SUB/FP_SUB/FP_SUB_in_context.xdc] for cell 'cX5_minus_aX7_sub'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_SUB/FP_SUB/FP_SUB_in_context.xdc] for cell 'cX5_minus_aX7_sub'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'f_X0_minus_X6_mult'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'f_X0_minus_X6_mult'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'b_X0_minus_X6_mult'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'b_X0_minus_X6_mult'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'f_X2_minus_X4_mult'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'f_X2_minus_X4_mult'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'b_X2_minus_X4_mult'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'b_X2_minus_X4_mult'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'd_X0_plus_X6_plus_X2_plus_X4'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'd_X0_plus_X6_plus_X2_plus_X4'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'd_X0_plus_X6_minus_X2_plus_X4'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'd_X0_plus_X6_minus_X2_plus_X4'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'a_X1_mult'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'a_X1_mult'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'c_X3_mult'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'c_X3_mult'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'e_X5_mult'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'e_X5_mult'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'g_X7_mult'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'g_X7_mult'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'c_X1_mult'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'c_X1_mult'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'g_X3_mult'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'g_X3_mult'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'a_X5_mult'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'a_X5_mult'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'e_X7_mult'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'e_X7_mult'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'e_X1_mult'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'e_X1_mult'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'a_X3_mult'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'a_X3_mult'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'g_X5_mult'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'g_X5_mult'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'c_X7_mult'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'c_X7_mult'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'g_X1_mult'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'g_X1_mult'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'e_X3_mult'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'e_X3_mult'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'c_X5_mult'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'c_X5_mult'
+Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'a_X7_mult'
+Finished Parsing XDC File [c:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.gen/sources_1/ip/FP_MUL/FP_MUL/FP_MUL_in_context.xdc] for cell 'a_X7_mult'
+Parsing XDC File [C:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.srcs/constrs_1/new/const.xdc]
+create_clock: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1905.289 ; gain = 10.180
+Finished Parsing XDC File [C:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.srcs/constrs_1/new/const.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1905.289 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1905.289 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'X0_Adder_X6' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'X0_Adder_new' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'X0_plus_X6_minus_X2_plus_X4_sub' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'X0_plus_X6_plus_X2_plus_X4_adder' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'X0_sub_X6' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'X1_Subtractor' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'X2_Adder' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'X2_Adder_X4' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'X2_sub_X4' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'X3_Subtractor' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'X4_Adder' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'X5_Subtractor' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'X6_Adder' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'X7_Subtractor' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'Z1_final_add' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'Z3_final_sub' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'Z5_final_add' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'Z7_final_add' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'Z_2' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'Z_6' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'aX1_plus_cX3_add' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'aX5_plus_eX7_add' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'a_X1_mult' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'a_X3_mult' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'a_X5_mult' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'a_X7_mult' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'b_X0_minus_X6_mult' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'b_X2_minus_X4_mult' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'cX1_minus_gX3_minus' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'cX5_minus_aX7_sub' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'c_X1_mult' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'c_X3_mult' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'c_X5_mult' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'c_X7_mult' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'd_X0_plus_X6_minus_X2_plus_X4' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'd_X0_plus_X6_plus_X2_plus_X4' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'eX1_minus_aX3_sub' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'eX5_plus_gX7_add' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'e_X1_mult' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'e_X3_mult' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'e_X5_mult' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'e_X7_mult' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'f_X0_minus_X6_mult' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'f_X2_minus_X4_mult' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'gX1_minus_eX3_sub' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'gX5_plus_cX7_add' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'g_X1_mult' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'g_X3_mult' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'g_X5_mult' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'g_X7_mult' at clock pin 'aclk' is different from the actual clock period '3.180', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 1905.289 ; gain = 382.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcu250-figd2104-2L-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:44 ; elapsed = 00:00:49 . Memory (MB): peak = 1905.289 ; gain = 382.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for X0_Adder_X6. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for X0_Adder_new. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for X0_plus_X6_plus_X2_plus_X4_adder. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for X2_Adder. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for X2_Adder_X4. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for X4_Adder. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for X6_Adder. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Z1_final_add. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Z5_final_add. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Z7_final_add. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Z_2. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for aX1_plus_cX3_add. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for aX5_plus_eX7_add. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for eX5_plus_gX7_add. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for gX5_plus_cX7_add. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for X0_plus_X6_minus_X2_plus_X4_sub. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for X0_sub_X6. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for X1_Subtractor. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for X2_sub_X4. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for X3_Subtractor. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for X5_Subtractor. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for X7_Subtractor. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Z3_final_sub. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for Z_6. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cX1_minus_gX3_minus. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cX5_minus_aX7_sub. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for eX1_minus_aX3_sub. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for gX1_minus_eX3_sub. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for a_X1_mult. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for a_X3_mult. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for a_X5_mult. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for a_X7_mult. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for b_X0_minus_X6_mult. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for b_X2_minus_X4_mult. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for c_X1_mult. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for c_X3_mult. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for c_X5_mult. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for c_X7_mult. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for d_X0_plus_X6_minus_X2_plus_X4. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for d_X0_plus_X6_plus_X2_plus_X4. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for e_X1_mult. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for e_X3_mult. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for e_X5_mult. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for e_X7_mult. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for f_X0_minus_X6_mult. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for f_X2_minus_X4_mult. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for g_X1_mult. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for g_X3_mult. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for g_X5_mult. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for g_X7_mult. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 1905.289 ; gain = 382.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:45 ; elapsed = 00:00:50 . Memory (MB): peak = 1905.289 ; gain = 382.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 12288 (col length:96)
+BRAMs: 5376 (col length: RAMB18 384 RAMB36 192)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:00:53 . Memory (MB): peak = 1905.289 ; gain = 382.824
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:14 ; elapsed = 00:01:23 . Memory (MB): peak = 2370.480 ; gain = 848.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:14 ; elapsed = 00:01:23 . Memory (MB): peak = 2370.777 ; gain = 848.313
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:14 ; elapsed = 00:01:23 . Memory (MB): peak = 2389.883 ; gain = 867.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:21 ; elapsed = 00:01:31 . Memory (MB): peak = 2397.973 ; gain = 875.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:21 ; elapsed = 00:01:31 . Memory (MB): peak = 2397.973 ; gain = 875.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:21 ; elapsed = 00:01:31 . Memory (MB): peak = 2397.973 ; gain = 875.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:21 ; elapsed = 00:01:31 . Memory (MB): peak = 2397.973 ; gain = 875.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:21 ; elapsed = 00:01:31 . Memory (MB): peak = 2397.973 ; gain = 875.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:21 ; elapsed = 00:01:31 . Memory (MB): peak = 2397.973 ; gain = 875.508
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |FP_ADD        |        15|
+|2     |FP_SUB        |        13|
+|3     |FP_MUL        |        22|
++------+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |FP_ADD  |     1|
+|2     |FP_ADD_ |    14|
+|16    |FP_MUL  |     1|
+|17    |FP_MUL_ |    21|
+|38    |FP_SUB  |     1|
+|39    |FP_SUB_ |    12|
+|51    |IBUF    |   258|
+|52    |OBUF    |   264|
++------+--------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:21 ; elapsed = 00:01:31 . Memory (MB): peak = 2397.973 ; gain = 875.508
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:50 ; elapsed = 00:01:10 . Memory (MB): peak = 2397.973 ; gain = 813.172
+Synthesis Optimization Complete : Time (s): cpu = 00:01:21 ; elapsed = 00:01:31 . Memory (MB): peak = 2397.973 ; gain = 875.508
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 2409.973 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 258 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 2505.301 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 258 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 258 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+26 Infos, 51 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:01 ; elapsed = 00:02:21 . Memory (MB): peak = 2505.301 ; gain = 1486.973
+INFO: [Common 17-1381] The checkpoint 'C:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.runs/synth_1/Eight_Bit_DCT.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Eight_Bit_DCT_utilization_synth.rpt -pb Eight_Bit_DCT_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 11 22:52:29 2021...

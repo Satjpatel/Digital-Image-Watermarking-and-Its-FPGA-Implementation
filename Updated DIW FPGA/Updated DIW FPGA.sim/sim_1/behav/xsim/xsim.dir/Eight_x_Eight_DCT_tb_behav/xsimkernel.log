@@ -1,0 +1,7 @@
+Running: xsim.dir/Eight_x_Eight_DCT_tb_behav/xsimk.exe -simmode gui -wdb Eight_x_Eight_DCT_tb_behav.wdb -simrunnum 0 -socket 52663
+Design successfully loaded
+Design Loading Memory Usage: 675488 KB (Peak: 675488 KB)
+Design Loading CPU Usage: 3249 ms
+Simulation completed
+Simulation Memory Usage: 700532 KB (Peak: 700532 KB)
+Simulation CPU Usage: 20124 ms

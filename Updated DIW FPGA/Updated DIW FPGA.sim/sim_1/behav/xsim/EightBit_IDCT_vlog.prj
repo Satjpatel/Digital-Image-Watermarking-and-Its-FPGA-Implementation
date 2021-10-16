@@ -1,0 +1,17 @@
+# compile verilog/system verilog design source files
+verilog floating_point_v7_1_11  \
+"../../../../Updated DIW FPGA.ip_user_files/ipstatic/hdl/floating_point_v7_1_rfs.v" \
+
+verilog xil_defaultlib  \
+"../../../../Updated DIW FPGA.gen/sources_1/ip/FP_ADD/sim/FP_ADD.v" \
+"../../../../Updated DIW FPGA.gen/sources_1/ip/FP_SUB/sim/FP_SUB.v" \
+"../../../../Updated DIW FPGA.gen/sources_1/ip/FP_MUL/sim/FP_MUL.v" \
+
+sv xil_defaultlib  \
+"../../../../Updated DIW FPGA.srcs/sources_1/new/EightBit_IDCT.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,301 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version     : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date             : Mon Oct 11 23:33:55 2021
+| Host             : DESKTOP-7VGU0UB running 64-bit major release  (build 9200)
+| Command          : report_power -file Eight_Bit_DCT_power_routed.rpt -pb Eight_Bit_DCT_power_summary_routed.pb -rpx Eight_Bit_DCT_power_routed.rpx
+| Design           : Eight_Bit_DCT
+| Device           : xcu250-figd2104-2L-e
+| Design State     : routed
+| Grade            : extended
+| Process          : typical
+| Characterization : Production
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Power Report
+
+Table of Contents
+-----------------
+1. Summary
+1.1 On-Chip Components
+1.2 Power Supply Summary
+1.3 Confidence Level
+2. Settings
+2.1 Environment
+2.2 Clock Constraints
+3. Detailed Reports
+3.1 By Hierarchy
+
+1. Summary
+----------
+
++--------------------------+--------------+
+| Total On-Chip Power (W)  | 4.347        |
+| Design Power Budget (W)  | Unspecified* |
+| Power Budget Margin (W)  | NA           |
+| Dynamic (W)              | 1.377        |
+| Device Static (W)        | 2.970        |
+| Effective TJA (C/W)      | 0.5          |
+| Max Ambient (C)          | 97.7         |
+| Junction Temperature (C) | 27.3         |
+| Confidence Level         | Low          |
+| Setting File             | ---          |
+| Simulation Activity File | ---          |
+| Design Nets Matched      | NA           |
++--------------------------+--------------+
+* Specify Design Power Budget using, set_operating_conditions -design_power_budget <value in Watts>
+
+
+1.1 On-Chip Components
+----------------------
+
++-------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
++-------------------------+-----------+----------+-----------+-----------------+
+| Clocks                  |     0.122 |        3 |       --- |             --- |
+| CLB Logic               |     0.130 |    35129 |       --- |             --- |
+|   LUT as Logic          |     0.095 |     7910 |   1728000 |            0.46 |
+|   Register              |     0.021 |    18330 |   3456000 |            0.53 |
+|   LUT as Shift Register |     0.010 |      716 |    791040 |            0.09 |
+|   CARRY8                |     0.003 |      512 |    216000 |            0.24 |
+|   Others                |     0.000 |     3848 |       --- |             --- |
+| Signals                 |     0.225 |    25714 |       --- |             --- |
+| DSPs                    |     0.136 |      100 |     12288 |            0.81 |
+| I/O                     |     0.764 |      522 |       676 |           77.22 |
+| Static Power            |     2.970 |          |           |                 |
+| Total                   |     4.347 |          |           |                 |
++-------------------------+-----------+----------+-----------+-----------------+
+
+
+1.2 Power Supply Summary
+------------------------
+
++------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Source     | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
++------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+| Vccint     |       0.850 |     1.891 |       0.721 |      1.170 |       NA    | Unspecified | NA         |
+| Vccint_io  |       0.850 |     0.177 |       0.034 |      0.142 |       NA    | Unspecified | NA         |
+| Vccbram    |       0.850 |     0.021 |       0.000 |      0.021 |       NA    | Unspecified | NA         |
+| Vccaux     |       1.800 |     0.885 |       0.000 |      0.885 |       NA    | Unspecified | NA         |
+| Vccaux_io  |       1.800 |     0.226 |       0.122 |      0.104 |       NA    | Unspecified | NA         |
+| Vcco33     |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco25     |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco18     |       1.800 |     0.286 |       0.286 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco15     |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco135    |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco12     |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vcco10     |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccadc     |       1.800 |     0.032 |       0.000 |      0.032 |       NA    | Unspecified | NA         |
+| MGTYAVcc   |       0.900 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTYAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| MGTYVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
++------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
+
+
+1.3 Confidence Level
+--------------------
+
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| User Input Data             | Confidence | Details                                                | Action                                                                                                     |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+| Design implementation state | High       | Design is routed                                       |                                                                                                            |
+| Clock nodes activity        | High       | User specified more than 95% of clocks                 |                                                                                                            |
+| I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view   |
+| Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views |
+| Device models               | High       | Device models are Production                           |                                                                                                            |
+|                             |            |                                                        |                                                                                                            |
+| Overall confidence level    | Low        |                                                        |                                                                                                            |
++-----------------------------+------------+--------------------------------------------------------+------------------------------------------------------------------------------------------------------------+
+
+
+2. Settings
+-----------
+
+2.1 Environment
+---------------
+
++-----------------------+--------------------------+
+| Ambient Temp (C)      | 25.0                     |
+| ThetaJA (C/W)         | 0.5                      |
+| Airflow (LFM)         | 250                      |
+| Heat Sink             | medium (Medium Profile)  |
+| ThetaSA (C/W)         | 0.7                      |
+| Board Selection       | medium (10"x10")         |
+| # of Board Layers     | 12to15 (12 to 15 Layers) |
+| Board Temperature (C) | 25.0                     |
++-----------------------+--------------------------+
+
+
+2.2 Clock Constraints
+---------------------
+
++-------+--------+-----------------+
+| Clock | Domain | Constraint (ns) |
++-------+--------+-----------------+
+| clk   | clk    |             3.2 |
++-------+--------+-----------------+
+
+
+3. Detailed Reports
+-------------------
+
+3.1 By Hierarchy
+----------------
+
++------------------------------------+-----------+
+| Name                               | Power (W) |
++------------------------------------+-----------+
+| Eight_Bit_DCT                      |     1.377 |
+|   X0_Adder_X6                      |     0.014 |
+|     inst                           |     0.014 |
+|       i_synth                      |     0.014 |
+|   X0_Adder_new                     |     0.010 |
+|     inst                           |     0.010 |
+|       i_synth                      |     0.010 |
+|   X0_plus_X6_minus_X2_plus_X4_sub  |     0.016 |
+|     inst                           |     0.016 |
+|       i_synth                      |     0.016 |
+|   X0_plus_X6_plus_X2_plus_X4_adder |     0.015 |
+|     inst                           |     0.015 |
+|       i_synth                      |     0.015 |
+|   X0_sub_X6                        |     0.014 |
+|     inst                           |     0.014 |
+|       i_synth                      |     0.014 |
+|   X1_Subtractor                    |     0.011 |
+|     inst                           |     0.011 |
+|       i_synth                      |     0.011 |
+|   X2_Adder                         |     0.010 |
+|     inst                           |     0.010 |
+|       i_synth                      |     0.010 |
+|   X2_Adder_X4                      |     0.013 |
+|     inst                           |     0.013 |
+|       i_synth                      |     0.013 |
+|   X2_sub_X4                        |     0.013 |
+|     inst                           |     0.013 |
+|       i_synth                      |     0.013 |
+|   X3_Subtractor                    |     0.011 |
+|     inst                           |     0.011 |
+|       i_synth                      |     0.011 |
+|   X4_Adder                         |     0.010 |
+|     inst                           |     0.010 |
+|       i_synth                      |     0.010 |
+|   X5_Subtractor                    |     0.011 |
+|     inst                           |     0.011 |
+|       i_synth                      |     0.011 |
+|   X6_Adder                         |     0.011 |
+|     inst                           |     0.011 |
+|       i_synth                      |     0.011 |
+|   X7_Subtractor                    |     0.011 |
+|     inst                           |     0.011 |
+|       i_synth                      |     0.011 |
+|   Z1_final_add                     |     0.019 |
+|     inst                           |     0.019 |
+|       i_synth                      |     0.019 |
+|   Z3_final_sub                     |     0.023 |
+|     inst                           |     0.023 |
+|       i_synth                      |     0.023 |
+|   Z5_final_add                     |     0.028 |
+|     inst                           |     0.028 |
+|       i_synth                      |     0.028 |
+|   Z7_final_add                     |     0.024 |
+|     inst                           |     0.024 |
+|       i_synth                      |     0.024 |
+|   Z_2                              |     0.023 |
+|     inst                           |     0.023 |
+|       i_synth                      |     0.023 |
+|   Z_6                              |     0.022 |
+|     inst                           |     0.022 |
+|       i_synth                      |     0.022 |
+|   aX1_plus_cX3_add                 |     0.017 |
+|     inst                           |     0.017 |
+|       i_synth                      |     0.017 |
+|   aX5_plus_eX7_add                 |     0.017 |
+|     inst                           |     0.017 |
+|       i_synth                      |     0.017 |
+|   a_X1_mult                        |     0.006 |
+|     inst                           |     0.006 |
+|       i_synth                      |     0.006 |
+|   a_X3_mult                        |     0.006 |
+|     inst                           |     0.006 |
+|       i_synth                      |     0.006 |
+|   a_X5_mult                        |     0.006 |
+|     inst                           |     0.006 |
+|       i_synth                      |     0.006 |
+|   a_X7_mult                        |     0.006 |
+|     inst                           |     0.006 |
+|       i_synth                      |     0.006 |
+|   b_X0_minus_X6_mult               |     0.007 |
+|     inst                           |     0.007 |
+|       i_synth                      |     0.007 |
+|   b_X2_minus_X4_mult               |     0.007 |
+|     inst                           |     0.007 |
+|       i_synth                      |     0.007 |
+|   cX1_minus_gX3_minus              |     0.017 |
+|     inst                           |     0.017 |
+|       i_synth                      |     0.017 |
+|   cX5_minus_aX7_sub                |     0.017 |
+|     inst                           |     0.017 |
+|       i_synth                      |     0.017 |
+|   c_X1_mult                        |     0.006 |
+|     inst                           |     0.006 |
+|       i_synth                      |     0.006 |
+|   c_X3_mult                        |     0.006 |
+|     inst                           |     0.006 |
+|       i_synth                      |     0.006 |
+|   c_X5_mult                        |     0.006 |
+|     inst                           |     0.006 |
+|       i_synth                      |     0.006 |
+|   c_X7_mult                        |     0.006 |
+|     inst                           |     0.006 |
+|       i_synth                      |     0.006 |
+|   d_X0_plus_X6_minus_X2_plus_X4    |     0.010 |
+|     inst                           |     0.010 |
+|       i_synth                      |     0.010 |
+|   d_X0_plus_X6_plus_X2_plus_X4     |     0.012 |
+|     inst                           |     0.012 |
+|       i_synth                      |     0.012 |
+|   eX1_minus_aX3_sub                |     0.016 |
+|     inst                           |     0.016 |
+|       i_synth                      |     0.016 |
+|   eX5_plus_gX7_add                 |     0.019 |
+|     inst                           |     0.019 |
+|       i_synth                      |     0.019 |
+|   e_X1_mult                        |     0.006 |
+|     inst                           |     0.006 |
+|       i_synth                      |     0.006 |
+|   e_X3_mult                        |     0.006 |
+|     inst                           |     0.006 |
+|       i_synth                      |     0.006 |
+|   e_X5_mult                        |     0.006 |
+|     inst                           |     0.006 |
+|       i_synth                      |     0.006 |
+|   e_X7_mult                        |     0.006 |
+|     inst                           |     0.006 |
+|       i_synth                      |     0.006 |
+|   f_X0_minus_X6_mult               |     0.007 |
+|     inst                           |     0.007 |
+|       i_synth                      |     0.007 |
+|   f_X2_minus_X4_mult               |     0.007 |
+|     inst                           |     0.007 |
+|       i_synth                      |     0.007 |
+|   gX1_minus_eX3_sub                |     0.017 |
+|     inst                           |     0.017 |
+|       i_synth                      |     0.017 |
+|   gX5_plus_cX7_add                 |     0.017 |
+|     inst                           |     0.017 |
+|       i_synth                      |     0.017 |
+|   g_X1_mult                        |     0.006 |
+|     inst                           |     0.006 |
+|       i_synth                      |     0.006 |
+|   g_X3_mult                        |     0.006 |
+|     inst                           |     0.006 |
+|       i_synth                      |     0.006 |
+|   g_X5_mult                        |     0.006 |
+|     inst                           |     0.006 |
+|       i_synth                      |     0.006 |
+|   g_X7_mult                        |     0.006 |
+|     inst                           |     0.006 |
+|       i_synth                      |     0.006 |
++------------------------------------+-----------+
+
+

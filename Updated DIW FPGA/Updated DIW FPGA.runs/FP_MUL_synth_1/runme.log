@@ -1,0 +1,14 @@
+
+*** Running vivado
+    with args -log FP_MUL.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source FP_MUL.tcl
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source FP_MUL.tcl -notrace
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP FP_MUL, cache-ID = 308ed50381e132ae.
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 11 22:49:53 2021...

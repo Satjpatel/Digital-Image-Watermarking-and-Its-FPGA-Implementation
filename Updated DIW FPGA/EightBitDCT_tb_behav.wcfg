@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Eight_x_Eight_DCT_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Eight_x_Eight_DCT_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="188770fs"></ZoomStartTime>
+      <ZoomEndTime time="331171fs"></ZoomEndTime>
+      <Cursor1Time time="283920fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="185"></NameColumnWidth>
+      <ValueColumnWidth column_width="131"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="19" />
+   <wvobject fp_name="/Eight_x_Eight_DCT_tb/row0" type="array">
+      <obj_property name="ElementShortName">row0[7:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">row0[7:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Eight_x_Eight_DCT_tb/row1" type="array">
+      <obj_property name="ElementShortName">row1[7:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">row1[7:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Eight_x_Eight_DCT_tb/row2" type="array">
+      <obj_property name="ElementShortName">row2[7:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">row2[7:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Eight_x_Eight_DCT_tb/row3" type="array">
+      <obj_property name="ElementShortName">row3[7:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">row3[7:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Eight_x_Eight_DCT_tb/row4" type="array">
+      <obj_property name="ElementShortName">row4[7:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">row4[7:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Eight_x_Eight_DCT_tb/row5" type="array">
+      <obj_property name="ElementShortName">row5[7:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">row5[7:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Eight_x_Eight_DCT_tb/row6" type="array">
+      <obj_property name="ElementShortName">row6[7:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">row6[7:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Eight_x_Eight_DCT_tb/row7" type="array">
+      <obj_property name="ElementShortName">row7[7:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">row7[7:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Eight_x_Eight_DCT_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Eight_x_Eight_DCT_tb/en" type="logic">
+      <obj_property name="ElementShortName">en</obj_property>
+      <obj_property name="ObjectShortName">en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Eight_x_Eight_DCT_tb/DCT_out_0" type="array">
+      <obj_property name="ElementShortName">DCT_out_0[7:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">DCT_out_0[7:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Eight_x_Eight_DCT_tb/DCT_out_1" type="array">
+      <obj_property name="ElementShortName">DCT_out_1[7:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">DCT_out_1[7:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Eight_x_Eight_DCT_tb/DCT_out_2" type="array">
+      <obj_property name="ElementShortName">DCT_out_2[7:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">DCT_out_2[7:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Eight_x_Eight_DCT_tb/DCT_out_3" type="array">
+      <obj_property name="ElementShortName">DCT_out_3[7:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">DCT_out_3[7:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Eight_x_Eight_DCT_tb/DCT_out_4" type="array">
+      <obj_property name="ElementShortName">DCT_out_4[7:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">DCT_out_4[7:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Eight_x_Eight_DCT_tb/DCT_out_5" type="array">
+      <obj_property name="ElementShortName">DCT_out_5[7:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">DCT_out_5[7:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Eight_x_Eight_DCT_tb/DCT_out_6" type="array">
+      <obj_property name="ElementShortName">DCT_out_6[7:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">DCT_out_6[7:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Eight_x_Eight_DCT_tb/DCT_out_7" type="array">
+      <obj_property name="ElementShortName">DCT_out_7[7:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">DCT_out_7[7:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Eight_x_Eight_DCT_tb/done" type="array">
+      <obj_property name="ElementShortName">done[7:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">done[7:0][7:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+</wave_config>

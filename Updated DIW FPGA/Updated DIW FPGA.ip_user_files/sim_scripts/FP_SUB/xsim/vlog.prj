@@ -1,0 +1,9 @@
+verilog floating_point_v7_1_11  \
+"../../../ipstatic/hdl/floating_point_v7_1_rfs.v" \
+
+verilog xil_defaultlib  \
+"../../../../Updated DIW FPGA.gen/sources_1/ip/FP_SUB/sim/FP_SUB.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

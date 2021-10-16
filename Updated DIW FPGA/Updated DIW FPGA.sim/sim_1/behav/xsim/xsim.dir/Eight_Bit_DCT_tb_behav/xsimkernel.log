@@ -1,0 +1,7 @@
+Running: xsim.dir/Eight_Bit_DCT_tb_behav/xsimk.exe -simmode gui -wdb Eight_Bit_DCT_tb_behav.wdb -simrunnum 0 -socket 50804
+Design successfully loaded
+Design Loading Memory Usage: 13180 KB (Peak: 13180 KB)
+Design Loading CPU Usage: 15 ms
+Simulation completed
+Simulation Memory Usage: 14524 KB (Peak: 14524 KB)
+Simulation CPU Usage: 46 ms

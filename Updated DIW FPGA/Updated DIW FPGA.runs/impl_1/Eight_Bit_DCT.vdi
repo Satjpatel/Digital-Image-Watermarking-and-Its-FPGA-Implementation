@@ -1,0 +1,844 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Oct 11 23:06:08 2021
+# Process ID: 5800
+# Current directory: C:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.runs/impl_1
+# Command line: vivado.exe -log Eight_Bit_DCT.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Eight_Bit_DCT.tcl -notrace
+# Log file: C:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.runs/impl_1/Eight_Bit_DCT.vdi
+# Journal file: C:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source Eight_Bit_DCT.tcl -notrace
+Command: open_checkpoint {C:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.runs/impl_1/Eight_Bit_DCT.dcp}
+
+Starting open_checkpoint Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.153 . Memory (MB): peak = 1014.410 ; gain = 0.000
+INFO: [Device 21-403] Loading part xcu250-figd2104-2L-e
+Netlist sorting complete. Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1600.426 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 892 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 5 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.137 . Memory (MB): peak = 2196.859 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 358 instances were transformed.
+  DSP48E1 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 100 instances
+  IBUF => IBUF (IBUFCTRL, INBUF): 258 instances
+
+INFO: [Project 1-604] Checkpoint was created with Vivado v2020.2 (64-bit) build 3064766
+open_checkpoint: Time (s): cpu = 00:01:58 ; elapsed = 00:02:34 . Memory (MB): peak = 2196.859 ; gain = 1182.449
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcu250'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcu250'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 2206.668 ; gain = 9.809
+
+Starting Cache Timing Information Task
+Ending Cache Timing Information Task | Checksum: d7420b70
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.199 . Memory (MB): peak = 2206.668 ; gain = 0.000
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 78 inverter(s) to 890 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 8bd19ea0
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 2399.207 ; gain = 0.148
+INFO: [Opt 31-389] Phase Retarget created 1426 cells and removed 1498 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 9cb596e8
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2399.207 ; gain = 0.148
+INFO: [Opt 31-389] Phase Constant propagation created 308 cells and removed 2106 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 16dec0e67
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2399.207 ; gain = 0.148
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 932 cells
+
+Phase 4 BUFG optimization
+INFO: [Opt 31-194] Inserted BUFG clk_IBUF_BUFG_inst to drive 19146 load(s) on clock net clk_IBUF_inst/O
+INFO: [Opt 31-193] Inserted 1 BUFG(s) on clock nets
+INFO: [Opt 31-1077] Phase BUFG optimization inserted 0 global clock buffer(s) for CLOCK_LOW_FANOUT.
+Phase 4 BUFG optimization | Checksum: e15cad92
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 2399.207 ; gain = 0.148
+INFO: [Opt 31-662] Phase BUFG optimization created 1 cells of which 1 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: e15cad92
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:30 . Memory (MB): peak = 2399.207 ; gain = 0.148
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: e15cad92
+
+Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 2399.207 ; gain = 0.148
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |            1426  |            1498  |                                              0  |
+|  Constant propagation         |             308  |            2106  |                                              0  |
+|  Sweep                        |               0  |             932  |                                              0  |
+|  BUFG optimization            |               1  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.155 . Memory (MB): peak = 2399.207 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 574b45b0
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 2399.207 ; gain = 0.148
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 574b45b0
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:01 . Memory (MB): peak = 2399.207 ; gain = 0.000
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 574b45b0
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2399.207 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.182 . Memory (MB): peak = 2399.207 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 574b45b0
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.183 . Memory (MB): peak = 2399.207 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+30 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 2399.207 ; gain = 202.348
+INFO: [Timing 38-480] Writing timing data to binary archive.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.runs/impl_1/Eight_Bit_DCT_opt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:27 ; elapsed = 00:00:21 . Memory (MB): peak = 2399.207 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_drc -file Eight_Bit_DCT_drc_opted.rpt -pb Eight_Bit_DCT_drc_opted.pb -rpx Eight_Bit_DCT_drc_opted.rpx
+Command: report_drc -file Eight_Bit_DCT_drc_opted.rpt -pb Eight_Bit_DCT_drc_opted.pb -rpx Eight_Bit_DCT_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/XilinxNayaDaur/Vivado/2020.2/data/ip'.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.runs/impl_1/Eight_Bit_DCT_drc_opted.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:02:35 ; elapsed = 00:02:22 . Memory (MB): peak = 4022.332 ; gain = 1623.125
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcu250'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcu250'
+WARNING: [Vivado_Tcl 4-1403] general.maxThreads 2 is less than number of SLRs 4. Continuing placement in non-ultrathreads mode.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.110 . Memory (MB): peak = 4022.332 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 0f331e1b
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.159 . Memory (MB): peak = 4022.332 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.113 . Memory (MB): peak = 4022.332 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: e5137a0b
+
+Time (s): cpu = 00:00:36 ; elapsed = 00:00:33 . Memory (MB): peak = 4022.332 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 13cb70aa1
+
+Time (s): cpu = 00:01:39 ; elapsed = 00:01:20 . Memory (MB): peak = 4022.332 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 13cb70aa1
+
+Time (s): cpu = 00:01:39 ; elapsed = 00:01:20 . Memory (MB): peak = 4022.332 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 13cb70aa1
+
+Time (s): cpu = 00:01:40 ; elapsed = 00:01:21 . Memory (MB): peak = 4022.332 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+
+Phase 2.1.1 Partition Driven Placement
+
+Phase 2.1.1.1 PBP: Partition Driven Placement
+Phase 2.1.1.1 PBP: Partition Driven Placement | Checksum: 13be4f44a
+
+Time (s): cpu = 00:02:18 ; elapsed = 00:01:48 . Memory (MB): peak = 4022.332 ; gain = 0.000
+
+Phase 2.1.1.2 PBP: Clock Region Placement
+Phase 2.1.1.2 PBP: Clock Region Placement | Checksum: 1365a07a1
+
+Time (s): cpu = 00:02:32 ; elapsed = 00:02:03 . Memory (MB): peak = 4022.332 ; gain = 0.000
+
+Phase 2.1.1.3 PBP: Compute Congestion
+Phase 2.1.1.3 PBP: Compute Congestion | Checksum: 1365a07a1
+
+Time (s): cpu = 00:02:39 ; elapsed = 00:02:11 . Memory (MB): peak = 4120.473 ; gain = 98.141
+
+Phase 2.1.1.4 PBP: UpdateTiming
+Phase 2.1.1.4 PBP: UpdateTiming | Checksum: 13c76ad90
+
+Time (s): cpu = 00:02:43 ; elapsed = 00:02:14 . Memory (MB): peak = 4120.473 ; gain = 98.141
+
+Phase 2.1.1.5 PBP: Add part constraints
+Phase 2.1.1.5 PBP: Add part constraints | Checksum: 13c76ad90
+
+Time (s): cpu = 00:02:43 ; elapsed = 00:02:15 . Memory (MB): peak = 4120.473 ; gain = 98.141
+Phase 2.1.1 Partition Driven Placement | Checksum: 13c76ad90
+
+Time (s): cpu = 00:02:43 ; elapsed = 00:02:15 . Memory (MB): peak = 4120.473 ; gain = 98.141
+Phase 2.1 Floorplanning | Checksum: 173ebafb8
+
+Time (s): cpu = 00:02:43 ; elapsed = 00:02:15 . Memory (MB): peak = 4120.473 ; gain = 98.141
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 173ebafb8
+
+Time (s): cpu = 00:02:44 ; elapsed = 00:02:15 . Memory (MB): peak = 4120.473 ; gain = 98.141
+
+Phase 2.3 Global Placement Core
+SLR(matching) [0-1]       0     0     0     0     0     0     0    26   102     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+
+Phase 2.3.1 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 1283 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
+INFO: [Physopt 32-775] End 1 Pass. Optimized 578 nets or cells. Created 0 new cell, deleted 578 existing cells and moved 0 existing cell
+INFO: [Physopt 32-69] No nets found for rewiring optimization.
+INFO: [Physopt 32-661] Optimized 0 net.  Re-placed 0 instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register to Pipeline Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.132 . Memory (MB): peak = 4793.652 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            0  |            578  |                   578  |           0  |           1  |  00:00:03  |
+|  Equivalent Driver Rewiring                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:01  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            0  |            578  |                   578  |           0  |           4  |  00:00:03  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.3.1 Physical Synthesis In Placer | Checksum: deb7f783
+
+Time (s): cpu = 00:05:32 ; elapsed = 00:04:29 . Memory (MB): peak = 4793.652 ; gain = 771.320
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   193     0     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+Phase 2.3 Global Placement Core | Checksum: 162ce6f4d
+
+Time (s): cpu = 00:06:01 ; elapsed = 00:04:58 . Memory (MB): peak = 4793.652 ; gain = 771.320
+Phase 2 Global Placement | Checksum: 162ce6f4d
+
+Time (s): cpu = 00:06:02 ; elapsed = 00:04:59 . Memory (MB): peak = 4793.652 ; gain = 771.320
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 1ba5b8a00
+
+Time (s): cpu = 00:06:14 ; elapsed = 00:05:11 . Memory (MB): peak = 4793.652 ; gain = 771.320
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   192     1     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 14fc650d2
+
+Time (s): cpu = 00:06:24 ; elapsed = 00:05:18 . Memory (MB): peak = 4793.652 ; gain = 771.320
+
+Phase 3.3 Small Shape DP
+
+Phase 3.3.1 Small Shape Clustering
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   192     1     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+Phase 3.3.1 Small Shape Clustering | Checksum: 1b3ec7696
+
+Time (s): cpu = 00:06:45 ; elapsed = 00:05:40 . Memory (MB): peak = 4793.652 ; gain = 771.320
+
+Phase 3.3.2 Flow Legalize Slice Clusters
+Phase 3.3.2 Flow Legalize Slice Clusters | Checksum: 1b67b8862
+
+Time (s): cpu = 00:06:53 ; elapsed = 00:05:48 . Memory (MB): peak = 4793.652 ; gain = 771.320
+
+Phase 3.3.3 Slice Area Swap
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   191     2     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+SLR(matching) [0-1]       0     0     0     0     0     0     0     0   128     0     0     0     0     0     0     0  Total:   128
+SLR(matching) [1-2]       0     0     0     0     0     0     0     0   191     2     0     0     0     0     0     0  Total:   193
+SLR(matching) [2-3]       0     0     0     0     0     0     0     0    96     0     0     0     0     0     0     0  Total:    96
+Phase 3.3.3 Slice Area Swap | Checksum: 17ecdca1d
+
+Time (s): cpu = 00:07:09 ; elapsed = 00:06:04 . Memory (MB): peak = 4793.652 ; gain = 771.320
+Phase 3.3 Small Shape DP | Checksum: 22c886900
+
+Time (s): cpu = 00:07:41 ; elapsed = 00:06:29 . Memory (MB): peak = 4793.652 ; gain = 771.320
+
+Phase 3.4 Re-assign LUT pins
+Phase 3.4 Re-assign LUT pins | Checksum: 266b2e636
+
+Time (s): cpu = 00:07:46 ; elapsed = 00:06:37 . Memory (MB): peak = 4793.652 ; gain = 771.320
+
+Phase 3.5 Pipeline Register Optimization
+Phase 3.5 Pipeline Register Optimization | Checksum: 131243d3e
+
+Time (s): cpu = 00:07:47 ; elapsed = 00:06:38 . Memory (MB): peak = 4793.652 ; gain = 771.320
+Phase 3 Detail Placement | Checksum: 131243d3e
+
+Time (s): cpu = 00:07:47 ; elapsed = 00:06:38 . Memory (MB): peak = 4793.652 ; gain = 771.320
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 16250a055
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=1.222 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: 169000333
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:04 . Memory (MB): peak = 4793.652 ; gain = 0.000
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: 183aec7c4
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 4793.652 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 16250a055
+
+Time (s): cpu = 00:09:33 ; elapsed = 00:08:06 . Memory (MB): peak = 4793.652 ; gain = 771.320
+
+Phase 4.1.1.2 BUFG Replication
+INFO: [Place 46-63] BUFG replication identified 0 candidate nets: Replicated nets: 0, Replicated BUFGs: 0, Replicated BUFG Driver: 0, Skipped due to Placement / Routing Conflict: 0, Skipped due to Timing: 0, Skipped due to constraints: 0
+Phase 4.1.1.2 BUFG Replication | Checksum: 16250a055
+
+Time (s): cpu = 00:09:34 ; elapsed = 00:08:06 . Memory (MB): peak = 4793.652 ; gain = 771.320
+INFO: [Place 30-746] Post Placement Timing Summary WNS=1.222. For the most accurate timing information please run report_timing.
+
+Phase 4.1.1.3 Replication
+INFO: [Place 46-19] Post Replication Timing Summary WNS=1.222. For the most accurate timing information please run report_timing.
+Phase 4.1.1.3 Replication | Checksum: 16b86023b
+
+Time (s): cpu = 00:09:38 ; elapsed = 00:08:09 . Memory (MB): peak = 4793.652 ; gain = 771.320
+
+Time (s): cpu = 00:09:38 ; elapsed = 00:08:09 . Memory (MB): peak = 4793.652 ; gain = 771.320
+Phase 4.1 Post Commit Optimization | Checksum: 16b86023b
+
+Time (s): cpu = 00:09:39 ; elapsed = 00:08:10 . Memory (MB): peak = 4793.652 ; gain = 771.320
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.163 . Memory (MB): peak = 4793.652 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 21eeda24b
+
+Time (s): cpu = 00:11:55 ; elapsed = 00:10:32 . Memory (MB): peak = 4793.652 ; gain = 771.320
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ________________________________________________________________________
+|           | Global Congestion | Long Congestion   | Short Congestion  |
+| Direction | Region Size       | Region Size       | Region Size       |
+|___________|___________________|___________________|___________________|
+|      North|                1x1|                1x1|                2x2|
+|___________|___________________|___________________|___________________|
+|      South|                1x1|                1x1|                2x2|
+|___________|___________________|___________________|___________________|
+|       East|                1x1|                1x1|                2x2|
+|___________|___________________|___________________|___________________|
+|       West|                1x1|                1x1|                4x4|
+|___________|___________________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 21eeda24b
+
+Time (s): cpu = 00:11:56 ; elapsed = 00:10:32 . Memory (MB): peak = 4793.652 ; gain = 771.320
+Phase 4.3 Placer Reporting | Checksum: 21eeda24b
+
+Time (s): cpu = 00:11:56 ; elapsed = 00:10:33 . Memory (MB): peak = 4793.652 ; gain = 771.320
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.117 . Memory (MB): peak = 4793.652 ; gain = 0.000
+
+Time (s): cpu = 00:11:56 ; elapsed = 00:10:33 . Memory (MB): peak = 4793.652 ; gain = 771.320
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 13608b0b0
+
+Time (s): cpu = 00:11:57 ; elapsed = 00:10:33 . Memory (MB): peak = 4793.652 ; gain = 771.320
+Ending Placer Task | Checksum: 106194ea4
+
+Time (s): cpu = 00:11:57 ; elapsed = 00:10:33 . Memory (MB): peak = 4793.652 ; gain = 771.320
+INFO: [Common 17-83] Releasing license: Implementation
+72 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:12:09 ; elapsed = 00:10:41 . Memory (MB): peak = 4793.652 ; gain = 771.320
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:23 ; elapsed = 00:00:09 . Memory (MB): peak = 4793.652 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.runs/impl_1/Eight_Bit_DCT_placed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:41 ; elapsed = 00:00:22 . Memory (MB): peak = 4793.652 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_io -file Eight_Bit_DCT_io_placed.rpt
+report_io: Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 4793.652 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file Eight_Bit_DCT_utilization_placed.rpt -pb Eight_Bit_DCT_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file Eight_Bit_DCT_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.361 . Memory (MB): peak = 4793.652 ; gain = 0.000
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcu250'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcu250'
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
+INFO: [Common 17-83] Releasing license: Implementation
+81 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:45 ; elapsed = 00:00:27 . Memory (MB): peak = 4793.652 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:22 ; elapsed = 00:00:08 . Memory (MB): peak = 4793.652 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.runs/impl_1/Eight_Bit_DCT_physopt.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:40 ; elapsed = 00:00:22 . Memory (MB): peak = 4793.652 ; gain = 0.000
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xcu250'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xcu250'
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC AVAL-318] DSP_dynamic_PCIN_tieoff_only_on_bottom_sites: The DSP48E2 X0_Adder_X6/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP is not placed on a bottom site of the device, has OPMODE[5:4] driven by active nets (value '01' uses PCIN bus), and ties some or all of its PCIN bus pin(s) to GND, but that connectivity is only available for the bottom DSP site. Care should be taken for the effect on that PCIN if the DSP site below it is used.
+WARNING: [DRC AVAL-318] DSP_dynamic_PCIN_tieoff_only_on_bottom_sites: The DSP48E2 X0_Adder_new/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP is not placed on a bottom site of the device, has OPMODE[5:4] driven by active nets (value '01' uses PCIN bus), and ties some or all of its PCIN bus pin(s) to GND, but that connectivity is only available for the bottom DSP site. Care should be taken for the effect on that PCIN if the DSP site below it is used.
+WARNING: [DRC AVAL-318] DSP_dynamic_PCIN_tieoff_only_on_bottom_sites: The DSP48E2 X0_plus_X6_minus_X2_plus_X4_sub/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP is not placed on a bottom site of the device, has OPMODE[5:4] driven by active nets (value '01' uses PCIN bus), and ties some or all of its PCIN bus pin(s) to GND, but that connectivity is only available for the bottom DSP site. Care should be taken for the effect on that PCIN if the DSP site below it is used.
+WARNING: [DRC AVAL-318] DSP_dynamic_PCIN_tieoff_only_on_bottom_sites: The DSP48E2 X0_plus_X6_plus_X2_plus_X4_adder/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP is not placed on a bottom site of the device, has OPMODE[5:4] driven by active nets (value '01' uses PCIN bus), and ties some or all of its PCIN bus pin(s) to GND, but that connectivity is only available for the bottom DSP site. Care should be taken for the effect on that PCIN if the DSP site below it is used.
+WARNING: [DRC AVAL-318] DSP_dynamic_PCIN_tieoff_only_on_bottom_sites: The DSP48E2 X0_sub_X6/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP is not placed on a bottom site of the device, has OPMODE[5:4] driven by active nets (value '01' uses PCIN bus), and ties some or all of its PCIN bus pin(s) to GND, but that connectivity is only available for the bottom DSP site. Care should be taken for the effect on that PCIN if the DSP site below it is used.
+WARNING: [DRC AVAL-318] DSP_dynamic_PCIN_tieoff_only_on_bottom_sites: The DSP48E2 X1_Subtractor/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP is not placed on a bottom site of the device, has OPMODE[5:4] driven by active nets (value '01' uses PCIN bus), and ties some or all of its PCIN bus pin(s) to GND, but that connectivity is only available for the bottom DSP site. Care should be taken for the effect on that PCIN if the DSP site below it is used.
+WARNING: [DRC AVAL-318] DSP_dynamic_PCIN_tieoff_only_on_bottom_sites: The DSP48E2 X2_Adder/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP is not placed on a bottom site of the device, has OPMODE[5:4] driven by active nets (value '01' uses PCIN bus), and ties some or all of its PCIN bus pin(s) to GND, but that connectivity is only available for the bottom DSP site. Care should be taken for the effect on that PCIN if the DSP site below it is used.
+WARNING: [DRC AVAL-318] DSP_dynamic_PCIN_tieoff_only_on_bottom_sites: The DSP48E2 X2_Adder_X4/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP is not placed on a bottom site of the device, has OPMODE[5:4] driven by active nets (value '01' uses PCIN bus), and ties some or all of its PCIN bus pin(s) to GND, but that connectivity is only available for the bottom DSP site. Care should be taken for the effect on that PCIN if the DSP site below it is used.
+WARNING: [DRC AVAL-318] DSP_dynamic_PCIN_tieoff_only_on_bottom_sites: The DSP48E2 X2_sub_X4/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP is not placed on a bottom site of the device, has OPMODE[5:4] driven by active nets (value '01' uses PCIN bus), and ties some or all of its PCIN bus pin(s) to GND, but that connectivity is only available for the bottom DSP site. Care should be taken for the effect on that PCIN if the DSP site below it is used.
+WARNING: [DRC AVAL-318] DSP_dynamic_PCIN_tieoff_only_on_bottom_sites: The DSP48E2 X3_Subtractor/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP is not placed on a bottom site of the device, has OPMODE[5:4] driven by active nets (value '01' uses PCIN bus), and ties some or all of its PCIN bus pin(s) to GND, but that connectivity is only available for the bottom DSP site. Care should be taken for the effect on that PCIN if the DSP site below it is used.
+WARNING: [DRC AVAL-318] DSP_dynamic_PCIN_tieoff_only_on_bottom_sites: The DSP48E2 X4_Adder/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP is not placed on a bottom site of the device, has OPMODE[5:4] driven by active nets (value '01' uses PCIN bus), and ties some or all of its PCIN bus pin(s) to GND, but that connectivity is only available for the bottom DSP site. Care should be taken for the effect on that PCIN if the DSP site below it is used.
+WARNING: [DRC AVAL-318] DSP_dynamic_PCIN_tieoff_only_on_bottom_sites: The DSP48E2 X5_Subtractor/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP is not placed on a bottom site of the device, has OPMODE[5:4] driven by active nets (value '01' uses PCIN bus), and ties some or all of its PCIN bus pin(s) to GND, but that connectivity is only available for the bottom DSP site. Care should be taken for the effect on that PCIN if the DSP site below it is used.
+WARNING: [DRC AVAL-318] DSP_dynamic_PCIN_tieoff_only_on_bottom_sites: The DSP48E2 X6_Adder/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP is not placed on a bottom site of the device, has OPMODE[5:4] driven by active nets (value '01' uses PCIN bus), and ties some or all of its PCIN bus pin(s) to GND, but that connectivity is only available for the bottom DSP site. Care should be taken for the effect on that PCIN if the DSP site below it is used.
+WARNING: [DRC AVAL-318] DSP_dynamic_PCIN_tieoff_only_on_bottom_sites: The DSP48E2 X7_Subtractor/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP is not placed on a bottom site of the device, has OPMODE[5:4] driven by active nets (value '01' uses PCIN bus), and ties some or all of its PCIN bus pin(s) to GND, but that connectivity is only available for the bottom DSP site. Care should be taken for the effect on that PCIN if the DSP site below it is used.
+WARNING: [DRC AVAL-318] DSP_dynamic_PCIN_tieoff_only_on_bottom_sites: The DSP48E2 Z1_final_add/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP is not placed on a bottom site of the device, has OPMODE[5:4] driven by active nets (value '01' uses PCIN bus), and ties some or all of its PCIN bus pin(s) to GND, but that connectivity is only available for the bottom DSP site. Care should be taken for the effect on that PCIN if the DSP site below it is used.
+WARNING: [DRC AVAL-318] DSP_dynamic_PCIN_tieoff_only_on_bottom_sites: The DSP48E2 Z3_final_sub/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP is not placed on a bottom site of the device, has OPMODE[5:4] driven by active nets (value '01' uses PCIN bus), and ties some or all of its PCIN bus pin(s) to GND, but that connectivity is only available for the bottom DSP site. Care should be taken for the effect on that PCIN if the DSP site below it is used.
+WARNING: [DRC AVAL-318] DSP_dynamic_PCIN_tieoff_only_on_bottom_sites: The DSP48E2 Z5_final_add/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP is not placed on a bottom site of the device, has OPMODE[5:4] driven by active nets (value '01' uses PCIN bus), and ties some or all of its PCIN bus pin(s) to GND, but that connectivity is only available for the bottom DSP site. Care should be taken for the effect on that PCIN if the DSP site below it is used.
+WARNING: [DRC AVAL-318] DSP_dynamic_PCIN_tieoff_only_on_bottom_sites: The DSP48E2 Z7_final_add/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP is not placed on a bottom site of the device, has OPMODE[5:4] driven by active nets (value '01' uses PCIN bus), and ties some or all of its PCIN bus pin(s) to GND, but that connectivity is only available for the bottom DSP site. Care should be taken for the effect on that PCIN if the DSP site below it is used.
+WARNING: [DRC AVAL-318] DSP_dynamic_PCIN_tieoff_only_on_bottom_sites: The DSP48E2 Z_2/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP is not placed on a bottom site of the device, has OPMODE[5:4] driven by active nets (value '01' uses PCIN bus), and ties some or all of its PCIN bus pin(s) to GND, but that connectivity is only available for the bottom DSP site. Care should be taken for the effect on that PCIN if the DSP site below it is used.
+WARNING: [DRC AVAL-318] DSP_dynamic_PCIN_tieoff_only_on_bottom_sites: The DSP48E2 Z_6/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP is not placed on a bottom site of the device, has OPMODE[5:4] driven by active nets (value '01' uses PCIN bus), and ties some or all of its PCIN bus pin(s) to GND, but that connectivity is only available for the bottom DSP site. Care should be taken for the effect on that PCIN if the DSP site below it is used.
+WARNING: [DRC AVAL-318] DSP_dynamic_PCIN_tieoff_only_on_bottom_sites: The DSP48E2 aX1_plus_cX3_add/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP is not placed on a bottom site of the device, has OPMODE[5:4] driven by active nets (value '01' uses PCIN bus), and ties some or all of its PCIN bus pin(s) to GND, but that connectivity is only available for the bottom DSP site. Care should be taken for the effect on that PCIN if the DSP site below it is used.
+WARNING: [DRC AVAL-318] DSP_dynamic_PCIN_tieoff_only_on_bottom_sites: The DSP48E2 aX5_plus_eX7_add/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP is not placed on a bottom site of the device, has OPMODE[5:4] driven by active nets (value '01' uses PCIN bus), and ties some or all of its PCIN bus pin(s) to GND, but that connectivity is only available for the bottom DSP site. Care should be taken for the effect on that PCIN if the DSP site below it is used.
+WARNING: [DRC AVAL-318] DSP_dynamic_PCIN_tieoff_only_on_bottom_sites: The DSP48E2 cX1_minus_gX3_minus/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP is not placed on a bottom site of the device, has OPMODE[5:4] driven by active nets (value '01' uses PCIN bus), and ties some or all of its PCIN bus pin(s) to GND, but that connectivity is only available for the bottom DSP site. Care should be taken for the effect on that PCIN if the DSP site below it is used.
+WARNING: [DRC AVAL-318] DSP_dynamic_PCIN_tieoff_only_on_bottom_sites: The DSP48E2 cX5_minus_aX7_sub/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP is not placed on a bottom site of the device, has OPMODE[5:4] driven by active nets (value '01' uses PCIN bus), and ties some or all of its PCIN bus pin(s) to GND, but that connectivity is only available for the bottom DSP site. Care should be taken for the effect on that PCIN if the DSP site below it is used.
+WARNING: [DRC AVAL-318] DSP_dynamic_PCIN_tieoff_only_on_bottom_sites: The DSP48E2 eX1_minus_aX3_sub/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP is not placed on a bottom site of the device, has OPMODE[5:4] driven by active nets (value '01' uses PCIN bus), and ties some or all of its PCIN bus pin(s) to GND, but that connectivity is only available for the bottom DSP site. Care should be taken for the effect on that PCIN if the DSP site below it is used.
+WARNING: [DRC AVAL-318] DSP_dynamic_PCIN_tieoff_only_on_bottom_sites: The DSP48E2 eX5_plus_gX7_add/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP is not placed on a bottom site of the device, has OPMODE[5:4] driven by active nets (value '01' uses PCIN bus), and ties some or all of its PCIN bus pin(s) to GND, but that connectivity is only available for the bottom DSP site. Care should be taken for the effect on that PCIN if the DSP site below it is used.
+WARNING: [DRC AVAL-318] DSP_dynamic_PCIN_tieoff_only_on_bottom_sites: The DSP48E2 gX1_minus_eX3_sub/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP is not placed on a bottom site of the device, has OPMODE[5:4] driven by active nets (value '01' uses PCIN bus), and ties some or all of its PCIN bus pin(s) to GND, but that connectivity is only available for the bottom DSP site. Care should be taken for the effect on that PCIN if the DSP site below it is used.
+WARNING: [DRC AVAL-318] DSP_dynamic_PCIN_tieoff_only_on_bottom_sites: The DSP48E2 gX5_plus_cX7_add/inst/i_synth/ADDSUB_OP.ADDSUB/DSP.OP/DSP48E1_BODY.ALIGN_ADD/DSP2/i_no_versal_es1_workaround.DSP is not placed on a bottom site of the device, has OPMODE[5:4] driven by active nets (value '01' uses PCIN bus), and ties some or all of its PCIN bus pin(s) to GND, but that connectivity is only available for the bottom DSP site. Care should be taken for the effect on that PCIN if the DSP site below it is used.
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors, 28 Warnings
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+Checksum: PlaceDB: 4168c4b7 ConstDB: 0 ShapeSum: 1148e9dd RouteDB: b367a010
+
+Phase 1 Build RT Design
+Nodegraph reading from file.  Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 4793.652 ; gain = 0.000
+Phase 1 Build RT Design | Checksum: dd364c8a
+
+Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 4793.652 ; gain = 0.000
+Post Restoration Checksum: NetGraph: 428053bd NumContArr: 355d8b4b Constraints: d9cdf3a5 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 151abd2ad
+
+Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 4793.652 ; gain = 0.000
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 151abd2ad
+
+Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 4793.652 ; gain = 0.000
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 151abd2ad
+
+Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 4793.652 ; gain = 0.000
+
+Phase 2.4 Global Clock Net Routing
+ Number of Nodes with overlaps = 0
+Phase 2.4 Global Clock Net Routing | Checksum: 2120c0f8b
+
+Time (s): cpu = 00:01:27 ; elapsed = 00:01:22 . Memory (MB): peak = 5273.391 ; gain = 479.738
+
+Phase 2.5 Update Timing
+Phase 2.5 Update Timing | Checksum: 2ae621102
+
+Time (s): cpu = 00:02:15 ; elapsed = 00:01:51 . Memory (MB): peak = 5273.391 ; gain = 479.738
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.311  | TNS=0.000  | WHS=-0.051 | THS=-1.398 |
+
+Phase 2 Router Initialization | Checksum: 30c4c9b2f
+
+Time (s): cpu = 00:03:01 ; elapsed = 00:02:19 . Memory (MB): peak = 5273.391 ; gain = 479.738
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0 %
+  Global Horizontal Routing Utilization  = 0 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 25716
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 25035
+  Number of Partially Routed Nets     = 681
+  Number of Node Overlaps             = 0
+
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+
+Phase 3.1.1 SLL Assignment
+Number SLLs per Column: 1440
+Estimated SLL Demand Per Column: 
+  SLR [2-3]        0 (  0%)     0 (  0%)     0 (  0%)     0 (  0%)     0 (  0%)     0 (  0%)     0 (  0%)    32 (  2%)    64 (  4%)    64 (  4%)     0 (  0%)     0 (  0%)     0 (  0%)     0 (  0%)     0 (  0%)     0 (  0%)  Demand:   160 Available: 23040 Utilization(%): 0.69
+  SLR [1-2]        0 (  0%)     0 (  0%)     0 (  0%)     0 (  0%)     0 (  0%)     0 (  0%)     0 (  0%)   129 (  9%)    65 (  5%)    65 (  5%)     1 (  0%)     1 (  0%)     0 (  0%)     0 (  0%)     0 (  0%)     0 (  0%)  Demand:   261 Available: 23040 Utilization(%): 1.13
+  SLR [0-1]        0 (  0%)     0 (  0%)     0 (  0%)     0 (  0%)     0 (  0%)     0 (  0%)     0 (  0%)    97 (  7%)    32 (  2%)     0 (  0%)     0 (  0%)     0 (  0%)     0 (  0%)     0 (  0%)     0 (  0%)     0 (  0%)  Demand:   129 Available: 23040 Utilization(%): 0.56
+Phase 3.1.1 SLL Assignment | Checksum: 25106caa4
+
+Time (s): cpu = 00:03:28 ; elapsed = 00:02:39 . Memory (MB): peak = 5325.273 ; gain = 531.621
+Phase 3.1 Global Routing | Checksum: 25106caa4
+
+Time (s): cpu = 00:03:28 ; elapsed = 00:02:39 . Memory (MB): peak = 5325.273 ; gain = 531.621
+Phase 3 Initial Routing | Checksum: 24f8f2d46
+
+Time (s): cpu = 00:04:29 ; elapsed = 00:03:13 . Memory (MB): peak = 5325.273 ; gain = 531.621
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 4787
+ Number of Nodes with overlaps = 429
+ Number of Nodes with overlaps = 27
+ Number of Nodes with overlaps = 3
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.004  | TNS=0.000  | WHS=-0.004 | THS=-0.005 |
+
+Phase 4.1 Global Iteration 0 | Checksum: fd51493b
+
+Time (s): cpu = 00:07:16 ; elapsed = 00:05:04 . Memory (MB): peak = 5325.273 ; gain = 531.621
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.004  | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 1c674ad2d
+
+Time (s): cpu = 00:07:28 ; elapsed = 00:05:12 . Memory (MB): peak = 5325.273 ; gain = 531.621
+Phase 4 Rip-up And Reroute | Checksum: 1c674ad2d
+
+Time (s): cpu = 00:07:28 ; elapsed = 00:05:12 . Memory (MB): peak = 5325.273 ; gain = 531.621
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 217697c9c
+
+Time (s): cpu = 00:07:52 ; elapsed = 00:05:26 . Memory (MB): peak = 5325.273 ; gain = 531.621
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.004  | TNS=0.000  | WHS=0.010  | THS=0.000  |
+
+Phase 5.1 Delay CleanUp | Checksum: 217697c9c
+
+Time (s): cpu = 00:07:53 ; elapsed = 00:05:26 . Memory (MB): peak = 5325.273 ; gain = 531.621
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 217697c9c
+
+Time (s): cpu = 00:07:53 ; elapsed = 00:05:27 . Memory (MB): peak = 5325.273 ; gain = 531.621
+Phase 5 Delay and Skew Optimization | Checksum: 217697c9c
+
+Time (s): cpu = 00:07:53 ; elapsed = 00:05:27 . Memory (MB): peak = 5325.273 ; gain = 531.621
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 1f7a7ea49
+
+Time (s): cpu = 00:08:11 ; elapsed = 00:05:37 . Memory (MB): peak = 5325.273 ; gain = 531.621
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=1.004  | TNS=0.000  | WHS=0.010  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 23696025e
+
+Time (s): cpu = 00:08:11 ; elapsed = 00:05:38 . Memory (MB): peak = 5325.273 ; gain = 531.621
+Phase 6 Post Hold Fix | Checksum: 23696025e
+
+Time (s): cpu = 00:08:12 ; elapsed = 00:05:38 . Memory (MB): peak = 5325.273 ; gain = 531.621
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.244308 %
+  Global Horizontal Routing Utilization  = 0.198932 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Phase 7 Route finalize | Checksum: 275da06ed
+
+Time (s): cpu = 00:08:24 ; elapsed = 00:05:45 . Memory (MB): peak = 5325.273 ; gain = 531.621
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 275da06ed
+
+Time (s): cpu = 00:08:25 ; elapsed = 00:05:45 . Memory (MB): peak = 5325.273 ; gain = 531.621
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 275da06ed
+
+Time (s): cpu = 00:08:32 ; elapsed = 00:05:55 . Memory (MB): peak = 5325.273 ; gain = 531.621
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=1.004  | TNS=0.000  | WHS=0.010  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 275da06ed
+
+Time (s): cpu = 00:08:33 ; elapsed = 00:05:55 . Memory (MB): peak = 5325.273 ; gain = 531.621
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:08:33 ; elapsed = 00:05:56 . Memory (MB): peak = 5325.273 ; gain = 531.621
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+97 Infos, 29 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:10:17 ; elapsed = 00:06:52 . Memory (MB): peak = 5325.273 ; gain = 531.621
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:29 ; elapsed = 00:00:10 . Memory (MB): peak = 5325.273 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.runs/impl_1/Eight_Bit_DCT_routed.dcp' has been generated.
+write_checkpoint: Time (s): cpu = 00:00:44 ; elapsed = 00:00:22 . Memory (MB): peak = 5325.273 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_drc -file Eight_Bit_DCT_drc_routed.rpt -pb Eight_Bit_DCT_drc_routed.pb -rpx Eight_Bit_DCT_drc_routed.rpx
+Command: report_drc -file Eight_Bit_DCT_drc_routed.rpt -pb Eight_Bit_DCT_drc_routed.pb -rpx Eight_Bit_DCT_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.runs/impl_1/Eight_Bit_DCT_drc_routed.rpt.
+report_drc completed successfully
+report_drc: Time (s): cpu = 00:01:40 ; elapsed = 00:00:57 . Memory (MB): peak = 5325.273 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_methodology -file Eight_Bit_DCT_methodology_drc_routed.rpt -pb Eight_Bit_DCT_methodology_drc_routed.pb -rpx Eight_Bit_DCT_methodology_drc_routed.rpx
+Command: report_methodology -file Eight_Bit_DCT_methodology_drc_routed.rpt -pb Eight_Bit_DCT_methodology_drc_routed.pb -rpx Eight_Bit_DCT_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file C:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.runs/impl_1/Eight_Bit_DCT_methodology_drc_routed.rpt.
+report_methodology completed successfully
+report_methodology: Time (s): cpu = 00:00:59 ; elapsed = 00:00:39 . Memory (MB): peak = 5325.273 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_power -file Eight_Bit_DCT_power_routed.rpt -pb Eight_Bit_DCT_power_summary_routed.pb -rpx Eight_Bit_DCT_power_routed.rpx
+Command: report_power -file Eight_Bit_DCT_power_routed.rpt -pb Eight_Bit_DCT_power_summary_routed.pb -rpx Eight_Bit_DCT_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+109 Infos, 29 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+report_power: Time (s): cpu = 00:01:05 ; elapsed = 00:00:43 . Memory (MB): peak = 5325.273 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_route_status -file Eight_Bit_DCT_route_status.rpt -pb Eight_Bit_DCT_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file Eight_Bit_DCT_timing_summary_routed.rpt -pb Eight_Bit_DCT_timing_summary_routed.pb -rpx Eight_Bit_DCT_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2L, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+report_timing_summary: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 5325.273 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_incremental_reuse -file Eight_Bit_DCT_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file Eight_Bit_DCT_clock_utilization_routed.rpt
+report_clock_utilization: Time (s): cpu = 00:01:01 ; elapsed = 00:01:04 . Memory (MB): peak = 5325.273 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file Eight_Bit_DCT_bus_skew_routed.rpt -pb Eight_Bit_DCT_bus_skew_routed.pb -rpx Eight_Bit_DCT_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2L, Temperature grade: E, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 11 23:35:06 2021...

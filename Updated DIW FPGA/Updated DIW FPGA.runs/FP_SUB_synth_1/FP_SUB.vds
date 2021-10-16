@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Oct 11 22:49:16 2021
+# Process ID: 5576
+# Current directory: C:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.runs/FP_SUB_synth_1
+# Command line: vivado.exe -log FP_SUB.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source FP_SUB.tcl
+# Log file: C:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.runs/FP_SUB_synth_1/FP_SUB.vds
+# Journal file: C:/Users/HP/Desktop/Sem 7/Seminar/Updated DIW FPGA/Updated DIW FPGA.runs/FP_SUB_synth_1\vivado.jou
+#-----------------------------------------------------------
+source FP_SUB.tcl -notrace
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP FP_SUB, cache-ID = 76bb613ab7ec28e7.
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 11 22:49:33 2021...
